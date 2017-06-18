@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="commons-codec-1.10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/curvesapi-1.04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/mysql-connector-java-5.1.31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-examples-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-excelant-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-schemas-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/poi-scratchpad-3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ua/andrewblake/lib/xmlbeans-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

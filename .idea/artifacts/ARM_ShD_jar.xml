@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ARM_ShD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ARM_ShD_jar</output-path>
+    <root id="archive" name="ARM_ShD.jar">
+      <element id="module-output" name="ARM_ShD" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/curvesapi-1.04.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/mysql-connector-java-5.1.31.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/junit-4.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-examples-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-excelant-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-schemas-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-scratchpad-3.16.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
