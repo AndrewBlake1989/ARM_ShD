@@ -7,111 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e588338-4d1e-4679-a9b2-55dd1ea638a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/excel/123.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-codec-1.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-collections4-4.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/commons-logging-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/curvesapi-1.04.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/junit-4.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/log4j-1.2.17.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/mysql-connector-java-5.1.31.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-examples-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-excelant-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-ooxml-schemas-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-scratchpad-3.16.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/lib/xmlbeans-2.6.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/resources/AccessImage_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/resources/MainImage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/resources/mysql.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/ARM_ShD_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/curvesapi_1_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/prepared.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/resources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ARM_ShD.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/Frame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/MainClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/enums/Department.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/enums/TypeOfDevice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/exceptions/FailedToCreateReportException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/exceptions/FailureLoadDataFromDatabaseException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/interfaces/GetData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelAuthorization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueEquipmentTechnicalPoints.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCataloguePeregons.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueStations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueUsers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelListOfRecordsFromBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelNoConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentD.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentE.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentSh.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelPreviousView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelReportGenerating.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelTypeOfDeviceOnPanelIntroductionError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelViewOrEditCatalogues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelViewRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/save/Stat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/settings/GlobalSettings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateDataBase.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableEquipmentTechnicalPoints.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTablePeregons.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTablePositions.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableRecords.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableShCh.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableStations.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableUsers.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableEquipmentTechnicalPoints.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTablePeregons.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTablePositions.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableShCh.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableStations.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableUsers.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/sql/order/TheOrderOfCreationAndFilling.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/CataloguePeregonsTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/CatalogueStationsTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/CatalogueUsersTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/EquipmentTechnicalPointsTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/ListOfRecordsTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TableModel2_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TableModel4_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TheftResultTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TheftTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/DateTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/MyToDoList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestExcel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestMySQL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestSerialization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestThread2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestThread3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/ConnectionToMySQL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/DateTime.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/FileFilterForSaveReportFileChooser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/SerializeToBlob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/SkinUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/SortComponents.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -133,8 +29,8 @@
       <file leaf-file-name="PanelMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="143" column="63" lean-forward="false" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
+            <state relative-caret-position="384">
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1031,8 +927,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1048,7 +943,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1658,8 +1553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="143" column="63" lean-forward="false" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
+        <state relative-caret-position="384">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
           <folding />
         </state>
       </provider>

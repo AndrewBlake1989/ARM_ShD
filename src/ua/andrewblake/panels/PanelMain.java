@@ -196,7 +196,6 @@ public class PanelMain extends JPanel {
 
 
 
-
     private void buttonChangeUserOnPanelMainActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);
         GlobalSettings.getPanelAuthorization().setVisible(true);
