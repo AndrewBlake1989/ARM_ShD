@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e588338-4d1e-4679-a9b2-55dd1ea638a5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -916,6 +915,14 @@
       <option name="presentableId" value="Default" />
       <updated>1492413213867</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit from Idea">
+      <created>1497861673431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1497861673431</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1002,7 +1009,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Commit from Idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit from Idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
