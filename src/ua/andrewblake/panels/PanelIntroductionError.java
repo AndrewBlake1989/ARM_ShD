@@ -447,6 +447,9 @@ public class PanelIntroductionError extends JPanel implements GetData {
         ((PanelTypeOfDeviceOnPanelIntroductionError) panelTypeOfDevice).reset();
         comboBoxDepartment.setSelectedIndex(0);
         whatShCh();
+        comboBoxBeginningYear.setEnabled(true);
+        comboBoxBeginningMonth.setEnabled(true);
+        comboBoxBeginningDay.setEnabled(true);
     }
 
     private void whatShCh() {
@@ -603,6 +606,9 @@ public class PanelIntroductionError extends JPanel implements GetData {
 
     @Override
     public void fillParams(Stat stat) {
+        comboBoxBeginningYear.setEnabled(false);
+        comboBoxBeginningMonth.setEnabled(false);
+        comboBoxBeginningDay.setEnabled(false);
         String[][] params = stat.paramsPanelIntroductionError;
         for (String[] s : params) {
             switch (s[0]) {

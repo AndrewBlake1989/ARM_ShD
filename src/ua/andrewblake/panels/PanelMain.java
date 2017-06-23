@@ -141,7 +141,7 @@ public class PanelMain extends JPanel {
         labelProgramStatus2OnPanelMain = new JLabel();
         this.add(labelProgramStatus2OnPanelMain);
         labelProgramStatus2OnPanelMain.setBounds(10, 545, 200, 15);
-        labelProgramStatus2OnPanelMain.setText("0.4 <2017-06-15>");
+        labelProgramStatus2OnPanelMain.setText("0.4.1 <2017-06-23>");
 
         this.setVisible(false);
 

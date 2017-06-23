@@ -2401,18 +2401,19 @@ public class ReportGenerator {
             cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(Integer.valueOf(cell.getStringCellValue()) / 60).concat(":").concat(Integer.valueOf(cell.getStringCellValue()) % 60 < 10 ? "0".concat(String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)) : String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)));
             cell = sheet.getRow(45).getCell(column);
             cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(Integer.valueOf(cell.getStringCellValue()) / 60).concat(":").concat(Integer.valueOf(cell.getStringCellValue()) % 60 < 10 ? "0".concat(String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)) : String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)));
-//            if (sheet.getRow(41).getCell(column).getStringCellValue().equals("0.00")) {
+            if (!sheet.getRow(41).getCell(column).getStringCellValue().equals("-")) {
                 cell = sheet.getRow(42).getCell(column);
                 cell.setCellValue(sheet.getRow(2).getCell(column).getStringCellValue().equals("-") ? "0.00" : String.valueOf(new BigDecimal(100 * Double.valueOf(sheet.getRow(2).getCell(column).getStringCellValue()) / Integer.valueOf(sheet.getRow(41).getCell(column).getStringCellValue())).setScale(2, RoundingMode.HALF_UP).doubleValue()));
                 cell = sheet.getRow(43).getCell(column);
                 cell.setCellValue(sheet.getRow(3).getCell(column).getStringCellValue().equals("-") ? "0.00" : String.valueOf(new BigDecimal(100 * Double.valueOf(sheet.getRow(3).getCell(column).getStringCellValue()) / Integer.valueOf(sheet.getRow(41).getCell(column).getStringCellValue())).setScale(2, RoundingMode.HALF_UP).doubleValue()));
                 cell = sheet.getRow(41).getCell(column);
-                cell.setCellValue(new BigDecimal(Double.valueOf((cell.getStringCellValue())) / 100).setScale(2, RoundingMode.HALF_UP).doubleValue());
-//            } else {
-//                sheet.getRow(41).getCell(column).setCellValue("-");
-//                sheet.getRow(42).getCell(column).setCellValue("-");
-//                sheet.getRow(43).getCell(column).setCellValue("-");
-//            }
+//                cell.setCellValue(new BigDecimal(Double.valueOf((cell.getStringCellValue())) / 100).setScale(2, RoundingMode.HALF_UP).doubleValue());
+                cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(new BigDecimal(Double.valueOf((cell.getStringCellValue())) / 100).setScale(2, RoundingMode.HALF_UP).doubleValue()));
+            } else {
+                sheet.getRow(41).getCell(column).setCellValue("-");
+                sheet.getRow(42).getCell(column).setCellValue("-");
+                sheet.getRow(43).getCell(column).setCellValue("-");
+            }
             // previous year
             sheet.getRow(1).getCell(column + 1).setCellValue(Integer.valueOf(currentYear) - 1);
             cell = sheet.getRow(38).getCell(column + 1);
@@ -2423,18 +2424,18 @@ public class ReportGenerator {
             cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(Integer.valueOf(cell.getStringCellValue()) / 60).concat(":").concat(Integer.valueOf(cell.getStringCellValue()) % 60 < 10 ? "0".concat(String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)) : String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)));
             cell = sheet.getRow(45).getCell(column + 1);
             cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(Integer.valueOf(cell.getStringCellValue()) / 60).concat(":").concat(Integer.valueOf(cell.getStringCellValue()) % 60 < 10 ? "0".concat(String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)) : String.valueOf(Integer.valueOf(cell.getStringCellValue()) % 60)));
-//            if (sheet.getRow(41).getCell(column + 1).getStringCellValue().equals("0.00")) {
+            if (!sheet.getRow(41).getCell(column + 1).getStringCellValue().equals("-")) {
                 cell = sheet.getRow(42).getCell(column + 1);
                 cell.setCellValue(sheet.getRow(2).getCell(column + 1).getStringCellValue().equals("-") ? "0.00" : String.valueOf(new BigDecimal(100 * Double.valueOf(sheet.getRow(2).getCell(column + 1).getStringCellValue()) / Integer.valueOf(sheet.getRow(41).getCell(column + 1).getStringCellValue())).setScale(2, RoundingMode.HALF_UP).doubleValue()));
                 cell = sheet.getRow(43).getCell(column + 1);
                 cell.setCellValue(sheet.getRow(3).getCell(column + 1).getStringCellValue().equals("-") ? "0.00" : String.valueOf(new BigDecimal(100 * Double.valueOf(sheet.getRow(3).getCell(column + 1).getStringCellValue()) / Integer.valueOf(sheet.getRow(41).getCell(column + 1).getStringCellValue())).setScale(2, RoundingMode.HALF_UP).doubleValue()));
                 cell = sheet.getRow(41).getCell(column + 1);
                 cell.setCellValue(cell.getStringCellValue().equals("-") ? "-" : String.valueOf(new BigDecimal(Double.valueOf((cell.getStringCellValue())) / 100).setScale(2, RoundingMode.HALF_UP).doubleValue()));
-//            } else {
-//                sheet.getRow(41).getCell(column + 1).setCellValue("-");
-//                sheet.getRow(42).getCell(column + 1).setCellValue("-");
-//                sheet.getRow(43).getCell(column + 1).setCellValue("-");
-//            }
+            } else {
+                sheet.getRow(41).getCell(column + 1).setCellValue("-");
+                sheet.getRow(42).getCell(column + 1).setCellValue("-");
+                sheet.getRow(43).getCell(column + 1).setCellValue("-");
+            }
         }
 
 

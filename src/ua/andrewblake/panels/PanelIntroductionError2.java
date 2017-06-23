@@ -150,19 +150,19 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
 
 
 
-        checkBox3 = new JCheckBox("Закриття основних засобів РПБ", false);
+        checkBox3 = new JCheckBox("Закриття основних засобів зв\'язку", false);
         this.add(checkBox3);
-        checkBox3.setBounds(10, 70, 190, 25);
+        checkBox3.setBounds(10, 70, 210, 25);
         checkBox3.addActionListener(this::checkBox3ActionPerformed);
 
-        label3_1 = new JLabel("Закриття основних засобів РПБ -");
+        label3_1 = new JLabel("Закриття основних засобів  зв\'язку:");
         this.add(label3_1);
         label3_1.setBounds(10, 303, 310, 15);
         label3_1.setEnabled(false);
 
         comboBox3_1 = new JComboBox<>(new String[]{"АБ", "НАБ"});
         this.add(comboBox3_1);
-        comboBox3_1.setBounds(180, 300, 45, 20);
+        comboBox3_1.setBounds(200, 300, 45, 20);
         comboBox3_1.addActionListener(this::comboBox3_1ActionPerformed);
         comboBox3_1.setEnabled(false);
 
@@ -171,7 +171,7 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
         comboBox3_2.addItem("Погаслі сигнальні вогні на 2-ох і більше розміщених підряд світлофорах на перегоні");
         comboBox3_2.addItem("Наявність дозволяючого вогню на прохідному світлофорі при зайнятій блок-дільниці");
         comboBox3_2.addItem("Неможливість зміни напрямку");
-        comboBox3_2.setBounds(230, 300, 550, 20);
+        comboBox3_2.setBounds(250, 300, 530, 20);
         comboBox3_2.setEnabled(false);
 
 
@@ -556,7 +556,7 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
 
     @Override
     public String[] getSimple(String[] simple) {
-        simple = ((GetData) GlobalSettings.getPanelIntroductionError()).getSimple(null);
+        simple = GlobalSettings.getPanelIntroductionError().getSimple(null);
         if ((checkBox1.isSelected()) || (checkBox2.isSelected()) || (checkBox3.isSelected()) || (checkBox4.isSelected()) || (checkBox5.isSelected()) || (checkBox6.isSelected()) || (checkBox7.isSelected())) {
             ArrayList<String> tempArray = new ArrayList<>();
             tempArray.add("Наслідки:");
@@ -570,7 +570,7 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
                 }
             }
             if (checkBox3.isSelected()) {
-                tempArray.add("\t".concat(label3_1.getText()).concat(" ").concat((String) comboBox3_1.getSelectedItem()).concat(" ").concat((String) comboBox3_2.getSelectedItem()).concat(";"));
+                tempArray.add("\t".concat(label3_1.getText()).concat("   ").concat((String) comboBox3_1.getSelectedItem()).concat(" - ").concat((String) comboBox3_2.getSelectedItem()).concat(";"));
             }
             if (checkBox4.isSelected()) {
                 tempArray.add("\tЗатримки поїздів");
@@ -611,13 +611,6 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
             }
             simple = newSimple;
         }
-
-//        for (String s : simple) {
-//            if (s != null) {
-//                System.out.println(s);
-//            }
-//        }
-
         return simple;
     }
 

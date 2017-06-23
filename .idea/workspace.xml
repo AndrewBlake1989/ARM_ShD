@@ -7,7 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e588338-4d1e-4679-a9b2-55dd1ea638a5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/save/SaveStatToBlob.svf" afterPath="$PROJECT_DIR$/src/ua/andrewblake/save/SaveStatToBlob.svf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,18 +31,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PanelMain.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="194" column="5" lean-forward="false" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,11 +71,9 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestExcel.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/lib/poi-3.16.jar!/org/apache/poi/hpsf/Section.class" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/sql/create/CreateTableRecords.sql" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError3.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/save/Stat.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueEquipmentTechnicalPoints.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TableModel2_1.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/tablemodels/TableModel4_1.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/temporary/TestThread2.java" />
@@ -94,7 +87,6 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableStations.sql" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/sql/insert/InsertIntoTableShCh.sql" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelTypeOfDeviceOnPanelIntroductionError.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/temporary/Test.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentSh.java" />
@@ -102,15 +94,21 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/exceptions/FailedToCreateReportException.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/exceptions/FailureLoadDataFromDatabaseException.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelReportGenerating.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelListOfRecordsFromBase.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelPreviousView.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCataloguePeregons.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueStations.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueUsers.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -158,6 +156,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,381 +171,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="temporary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tablemodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="insert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="create" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="settings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="save" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prepared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exceptions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="andrewblake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="excel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARM_ShD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -935,25 +563,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29335073" sideWeight="0.505" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29335073" sideWeight="0.495" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28552803" sideWeight="0.495" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1014,7 +641,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1055,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="25" column="87" lean-forward="false" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,10 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding>
-            <element signature="method#buttonBackActionPerformed#0;class#PanelIntroductionError3#0" expanded="false" />
-            <element signature="method#buttonNextActionPerformed#0;class#PanelIntroductionError3#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1411">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,30 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="705" column="41" lean-forward="false" selection-start-line="705" selection-start-column="41" selection-end-line="705" selection-end-column="41" />
-          <folding>
-            <element signature="method#comboBox3_1ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#button4_DeleteSelectedActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#table4_1MouseClicked#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#table4_1KeyPressed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#buttonBackActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#buttonNextActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox1ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox2ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox3ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox4ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox5ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#checkBox6ActionPerformed#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#canContinue#0;class#PanelIntroductionError2#0" expanded="false" />
-            <element signature="method#getSimple#0;class#PanelIntroductionError2#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,10 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#175#176#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,10 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#167#168#0" expanded="false" />
-            <element signature="e#208#209#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,12 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#175#176#0" expanded="false" />
-            <element signature="e#223#224#0" expanded="false" />
-            <element signature="e#250#251#0" expanded="false" />
-            <element signature="e#280#281#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,10 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#139#140#0" expanded="false" />
-            <element signature="e#163#164#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1227,7 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="129" lean-forward="false" selection-start-line="17" selection-start-column="129" selection-end-line="17" selection-end-column="129" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,16 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="135" column="17" lean-forward="false" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
-          <folding>
-            <element signature="method#PanelTypeOfDeviceOnPanelIntroductionError#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#comboBoxTypeOfDeviceActionPerformed#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#comboBoxTypicalReasonActionPerformed#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#comboBoxTypicalReasonTemp1ActionPerformed#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#canContinue#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#getSimple#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#getParams#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-            <element signature="method#fillParams#0;class#PanelTypeOfDeviceOnPanelIntroductionError#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,36 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-          <folding>
-            <element signature="method#getAllStations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch1Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch2Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch3Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch4Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch5Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch6Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch8Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch9Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch10Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch11Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch12Stations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getAllPeregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch1Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch2Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch3Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch4Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch5Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch6Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch8Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch9Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch10Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch11Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getShch12Peregons#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getFromDB#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getOtherElementsElectricitySupplyInstallations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getReasonForOtherElementsElectricitySupplyInstallations#0;class#StringModels#0" expanded="false" />
-            <element signature="method#getReasonForOtherElementsRackAndPinionRange#0;class#StringModels#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,20 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="266" column="61" lean-forward="true" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="61" />
-          <folding>
-            <element signature="method#canContinue#0;class#PanelObjectsAndReasonsByDepartmentOther#0" expanded="false" />
-            <element signature="method#getSimple#0;class#PanelObjectsAndReasonsByDepartmentOther#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1378,15 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="245" column="53" lean-forward="false" selection-start-line="245" selection-start-column="53" selection-end-line="245" selection-end-column="53" />
-          <folding>
-            <element signature="method#PanelObjectsAndReasonsByDepartmentP#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#comboBoxListPChActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#comboBoxObjectActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#comboBoxReasonActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#canContinue#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#getSimple#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-            <element signature="method#getParams#0;class#PanelObjectsAndReasonsByDepartmentP#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1394,25 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="4819" column="52" lean-forward="false" selection-start-line="4819" selection-start-column="22" selection-end-line="4819" selection-end-column="52" />
-          <folding>
-            <element signature="method#PanelObjectsAndReasonsByDepartmentSh#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxShObjectsActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxShObjects_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxShObjects_additionally_2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxElementActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxElement_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxElement_additionally_2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxElement_additionally_3ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxElement2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxReason1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxReason1_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxReason1_additionally_2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxReason2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#comboBoxReason2_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#canContinue#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#getSimple#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-            <element signature="method#getParams#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1435,12 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1448,62 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="445" column="127" lean-forward="false" selection-start-line="445" selection-start-column="127" selection-end-line="445" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="2436" column="15" lean-forward="true" selection-start-line="2432" selection-start-column="14" selection-end-line="2436" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#takeRecords#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#makeStats#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#getEquipmentTechnicalPoints#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#resetTables#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#fillTablesZeroValues#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#fillTablesZeroValues#1;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable1ThisYear#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable1PreviousYear#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable2#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_1#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_2#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_3#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_4#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_6#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_7#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_8#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_9#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_9a#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_10#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_11#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateStatisticTable3_12#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#calculateTotal#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#copyPreparedTables#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable2#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_1#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_2#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_3#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_4#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_6#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_7#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_8#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_9#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_9a#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_10#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_11#0;class#ReportGenerator#0" expanded="false" />
-            <element signature="method#writeTable3_12#0;class#ReportGenerator#0" expanded="false" />
-            <marker date="1497515379983" expanded="false" signature="161338:162952" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="84" column="57" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="84" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1146">
           <caret line="176" column="19" lean-forward="true" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="89" column="29" lean-forward="false" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,16 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="121" column="76" lean-forward="false" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="76" />
-          <folding>
-            <element signature="e#8407#9026#0" expanded="true" />
-            <element signature="e#9025#9026#0" expanded="true" />
-            <element signature="method#tableRecordsKeyPressed#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-            <element signature="method#reset#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-            <element signature="method#buttonBackActionPerformed#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-            <element signature="method#buttonShowOrEditActionPerformed#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-            <element signature="method#buttonDeleteRecordActionPerformed#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-            <element signature="method#buttonRepairActionPerformed#0;class#PanelListOfRecordsFromBase#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="404" column="40" lean-forward="false" selection-start-line="404" selection-start-column="40" selection-end-line="404" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="405" column="40" lean-forward="false" selection-start-line="405" selection-start-column="40" selection-end-line="405" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1560,15 +969,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="411" column="36" lean-forward="false" selection-start-line="411" selection-start-column="36" selection-end-line="411" selection-end-column="36" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627">
+          <caret line="220" column="54" lean-forward="false" selection-start-line="220" selection-start-column="54" selection-end-line="220" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="610" column="45" lean-forward="false" selection-start-line="610" selection-start-column="45" selection-end-line="610" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="2410" column="16" lean-forward="false" selection-start-line="2410" selection-start-column="16" selection-end-line="2410" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="572" column="134" lean-forward="false" selection-start-line="572" selection-start-column="134" selection-end-line="572" selection-end-column="134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="194" column="5" lean-forward="false" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="287">
+          <caret line="143" column="65" lean-forward="false" selection-start-line="143" selection-start-column="65" selection-end-line="143" selection-end-column="65" />
         </state>
       </provider>
     </entry>

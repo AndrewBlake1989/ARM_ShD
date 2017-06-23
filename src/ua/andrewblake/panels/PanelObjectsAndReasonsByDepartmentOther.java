@@ -218,9 +218,8 @@ class PanelObjectsAndReasonsByDepartmentOther extends JPanel implements GetData 
     @Override
     public String[] getSimple(String[] simple) {
         ArrayList<String> tempArray = new ArrayList<>();
-        if (comboBox1.getSelectedIndex() == 2) {
-            tempArray.add("Інші причини - ".concat(textField.getText()).concat(";"));
-        } else {
+        tempArray.add("Відповідальна служба - Інша;");
+        if (comboBox1.getSelectedIndex() == 1) { // Крадіжка
             tempArray.add("Причина - крадіжка;");
             tempArray.add("Викрадено:");
             boolean haveAnyRecord = false;
@@ -239,6 +238,12 @@ class PanelObjectsAndReasonsByDepartmentOther extends JPanel implements GetData 
                     tempArray.add(((String) table2.getValueAt(i, 0)).trim().concat(": ").concat((String) table2.getValueAt(i, 1)));
                 }
             }
+        }
+        if (comboBox1.getSelectedIndex() == 2) { // Рейкове коло
+            tempArray.add("Рейкове коло - ".concat(textField.getText()).concat(";"));
+        }
+        if (comboBox1.getSelectedIndex() == 3) { // Інше
+            tempArray.add("Інші причини - ".concat(textField.getText()).concat(";"));
         }
 
         // Create array of this class:
