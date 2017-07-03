@@ -12,6 +12,7 @@ public class PanelNoConnection extends JPanel {
     private JButton buttonExit;
     private JLabel imageMySQL;
     private JLabel labelNoConnection;
+    private JButton buttonConnectSettings;
 
     public PanelNoConnection() {
 
@@ -34,12 +35,25 @@ public class PanelNoConnection extends JPanel {
         buttonExit.setText("Вихід");
         buttonExit.addActionListener(this::buttonExitActionPerformed);
 
+        buttonConnectSettings = new JButton();
+        this.add(buttonConnectSettings);
+        buttonConnectSettings.setBounds(360, 330, 25, 25);
+        buttonConnectSettings.setIcon(new ImageIcon("src/ua/andrewblake/resources/Settings.png"));
+        buttonConnectSettings.setToolTipText("Змінити налаштування підключення");
+        buttonConnectSettings.addActionListener(this::buttonConnectSettingsActionPerformed);
+
         this.setVisible(false);
 
     }
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {
         System.exit(0);
+    }
+
+    private void buttonConnectSettingsActionPerformed(java.awt.event.ActionEvent evt) {
+        this.setVisible(false);
+        GlobalSettings.getPanelConnectionSettings().setVisible(true);
+        GlobalSettings.getPanelConnectionSettings().fillParams();
     }
 
 }

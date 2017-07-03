@@ -1,6 +1,8 @@
 package ua.andrewblake.utils;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
+import ua.andrewblake.settings.ConnectionSettings;
+
 import java.sql.*;
 
 public class ConnectionToMySQL {
@@ -15,7 +17,22 @@ public class ConnectionToMySQL {
             try {
                 Driver driver = new FabricMySQLDriver();
                 DriverManager.registerDriver(driver);
-                connectionToMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/arm_shd_database", "root", "password");
+                ConnectionSettings connectionSettings = SerializeConnectionSettings.deserialize();
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append("jdbc:mysql://");
+                stringBuilder.append(connectionSettings.ip1);
+                stringBuilder.append(".");
+                stringBuilder.append(connectionSettings.ip2);
+                stringBuilder.append(".");
+                stringBuilder.append(connectionSettings.ip3);
+                stringBuilder.append(".");
+                stringBuilder.append(connectionSettings.ip4);
+                stringBuilder.append(":");
+                stringBuilder.append(connectionSettings.port);
+                stringBuilder.append("/");
+                stringBuilder.append(connectionSettings.nameDB);
+//                connectionToMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/arm_shd_database", "root", "password");
+                connectionToMySQL = DriverManager.getConnection(stringBuilder.toString(), connectionSettings.username, connectionSettings.password);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

@@ -2,6 +2,8 @@ package ua.andrewblake.panels;
 
 import ua.andrewblake.settings.GlobalSettings;
 import ua.andrewblake.utils.ConnectionToMySQL;
+import ua.andrewblake.utils.SerializeToVRS;
+import ua.andrewblake.version.Version;
 
 import javax.swing.*;
 import java.sql.*;
@@ -141,7 +143,8 @@ public class PanelMain extends JPanel {
         labelProgramStatus2OnPanelMain = new JLabel();
         this.add(labelProgramStatus2OnPanelMain);
         labelProgramStatus2OnPanelMain.setBounds(10, 545, 200, 15);
-        labelProgramStatus2OnPanelMain.setText("0.4.1 <2017-06-23>");
+        Version vrs = SerializeToVRS.deserialize();
+        labelProgramStatus2OnPanelMain.setText(vrs.sVersion.concat("     [").concat(String.valueOf(vrs.countVersion)).concat("]     ").concat(vrs.sDate));
 
         this.setVisible(false);
 

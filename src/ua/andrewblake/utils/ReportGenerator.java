@@ -3,12 +3,13 @@ package ua.andrewblake.utils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import ua.andrewblake.enums.Department;
+import ua.andrewblake.exceptions.AccessingFileException;
+import ua.andrewblake.exceptions.CommunicateFileSystemException;
 import ua.andrewblake.exceptions.FailedToCreateReportException;
 import ua.andrewblake.exceptions.FailureLoadDataFromDatabaseException;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.tablemodels.TableModel4_1;
 
-import javax.swing.*;
 import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -46,9 +47,10 @@ public class ReportGenerator {
     private static int[][] table3_10;
     private static int[][] table3_11;
     private static int[][] table3_12;
+    private static int[][][] tables4and5;
     private static String nameOfPeriod;
 
-    public static boolean createReport(File directoryToSave, String periodOfTime, String previousYearPeriodOfTime, String year, String period) throws FailureLoadDataFromDatabaseException, FailedToCreateReportException {
+    public static void createReport(File directoryToSave, String periodOfTime, String previousYearPeriodOfTime, String year, String period) throws FailedToCreateReportException {
         directory = directoryToSave.toString();
         currentYear = year;
         nameOfPeriod = period;
@@ -56,24 +58,33 @@ public class ReportGenerator {
         makeStats();
         getEquipmentTechnicalPoints();
         resetTables();
+        writeTable1();
+        writeTable2();
+        writeTable3_1();
+        writeTable3_2();
+        writeTable3_3();
+        writeTable3_4();
+        writeTable3_6();
+        writeTable3_7();
+        writeTable3_8();
+        writeTable3_9();
+        writeTable3_9a();
+        writeTable3_10();
+        writeTable3_11();
+        writeTable3_12();
+        calculateStatisticTables4and5();
+        writeTable4_1();
+        writeTable4_2();
+        writeTable4_3();
+        writeTable4_4();
+        writeTable5_1();
+        writeTable5_2();
+        writeTable5_3();
+        writeTable5_4();
+        writeTable5_5();
 
-        if (!writeTable1()) {return false;}
-        if (!writeTable2()) {return false;}
-        if (!writeTable3_1()) {return false;}
-        if (!writeTable3_2()) {return false;}
-        if (!writeTable3_3()) {return false;}
-        if (!writeTable3_4()) {return false;}
-        if (!writeTable3_6()) {return false;}
-        if (!writeTable3_7()) {return false;}
-        if (!writeTable3_8()) {return false;}
-        if (!writeTable3_9()) {return false;}
-        if (!writeTable3_9a()) {return false;}
-        if (!writeTable3_10()) {return false;}
-        if (!writeTable3_11()) {return false;}
-        if (!writeTable3_12()) {return false;}
 
 
-        return true;
     }
 
     private static void takeRecords(String periodOfTime, String previousYearPeriodOfTime) throws FailureLoadDataFromDatabaseException {
@@ -272,6 +283,8 @@ public class ReportGenerator {
         fillTablesZeroValues(table3_12);
         table2 = new int[10][45][14];
         fillTablesZeroValues(table2);
+        tables4and5 = new int[9][20][11];
+        fillTablesZeroValues(tables4and5);
 
 
     }
@@ -645,7 +658,8 @@ public class ReportGenerator {
                 if (s[0].equals("comboBoxTypeOfDevice")) {
                     numberOfTable = Integer.valueOf(s[1]);
                     numberOfTable = (numberOfTable == 8) || (numberOfTable == 9) ? 7 : numberOfTable;
-                    numberOfTable = numberOfTable == 10 ? 8 : numberOfTable;
+                    numberOfTable = numberOfTable == 11 ? 8 : numberOfTable;
+                    numberOfTable = numberOfTable == 10 ? 0 : numberOfTable;
                     break;
                 }
             }
@@ -2264,6 +2278,111 @@ public class ReportGenerator {
         }
     }
 
+    private static void calculateStatisticTables4and5() {
+        for (Stat stat : thisYearStats) {
+            if (!stat.paramsPanelIntroductionError2[2].equals("true")) {
+                continue;
+            }
+            int tableNum = Integer.valueOf(stat.paramsPanelIntroductionError2[10]) * 4 + Integer.valueOf(stat.paramsPanelIntroductionError2[11]);
+            int row = stat.dist < 7 ? 7 + stat.dist : 6 + stat.dist;
+            int column = 0;
+            Department department = Other;
+            for (String[] s : stat.paramsPanelIntroductionError) {
+                if (s[0].equals("comboBoxDepartment")) { // Служба
+                    if (s[1].equals("4")) { // E
+                        if (stat.paramsPanelObjectsAndReasons[0][0].equals("0")) {
+                            column = 2;
+                        }
+                    }
+                    if (s[1].equals("1")) { // Sh
+                        for (String[] s1 : stat.paramsPanelObjectsAndReasons) {
+                            if (s1[0].equals("comboBoxShObjects")) {
+                                switch (s1[1]) {
+                                    case "7": // Повітряні лінії
+                                        column = 5;
+                                        break;
+                                    case "8": // Кабельні лінії
+                                        column = 6;
+                                        break;
+                                    case "9": // Рейкові кола
+                                        for (String[] s2 : stat.paramsPanelObjectsAndReasons) {
+                                            if (s2[0].equals("comboBoxElement")) {
+                                                switch (s2[1]) {
+                                                    case "1":
+                                                    case "2":
+                                                    case "3":
+                                                    case "4":
+                                                        column = 4;
+                                                        break;
+                                                    case "5":
+                                                    case "6":
+                                                        column = 3;
+                                                        break;
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        break;
+                                    case "10": // Інший об'єкт
+                                        for (String[] s2 : stat.paramsPanelObjectsAndReasons) {
+                                            if (s2[0].equals("comboBoxShObjects_additionally_1")) {
+                                                    if (s2[1].equals("1")) { // Інший об'єкт
+                                                        column = 9;
+                                                    } else { // При реконструкції пристроїв СЦБ
+                                                        column = 8;
+                                                    }
+                                                break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        column = 4;
+                                        break;
+                                }
+                                break;
+                            }
+                        }
+                        for (String[] s1 : stat.paramsPanelObjectsAndReasons) {
+                            if (s1[0].equals("comboBoxReason2")) {
+                                if (s1[1].equals("2")) { // Експлуатаційні
+                                    for (String[] s2 : stat.paramsPanelObjectsAndReasons) {
+                                        if (s2[0].equals("comboBoxReason2_additionally_1")) {
+                                            if (s2[1].equals("7")) { // Гроза, стихія, перенапруга
+                                                column = 7;
+                                            }
+                                            break;
+                                        }
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+            tables4and5[tableNum][row][column]++;
+        }
+        for (int row = 8; row <= 18; row++) {
+            for (int column = 2; column <= 9; column++) {
+                tables4and5[3][row][column] = tables4and5[0][row][column] + tables4and5[1][row][column] + tables4and5[2][row][column];
+                tables4and5[8][row][column] = tables4and5[4][row][column] + tables4and5[5][row][column] + tables4and5[6][row][column] + tables4and5[7][row][column];
+            }
+        }
+        for (int tableNum = 0; tableNum <= 8; tableNum++) {
+            for (int row = 8; row <= 18; row++) {
+                for (int column = 2; column <= 9; column++) {
+                    tables4and5[tableNum][19][column] += tables4and5[tableNum][row][column];
+                }
+            }
+            for (int row = 8; row <= 19; row++) {
+                for (int column = 2; column <= 9; column++) {
+                    tables4and5[tableNum][row][10] += tables4and5[tableNum][row][column];
+                }
+            }
+        }
+    }
+
     private static void calculateTotal(int[][] table, int beginRow, int totalRow, int beginColumn, int totalColumn) {
         for (int row = beginRow; row < totalRow; row++) {
             for (int column = beginColumn; column < totalColumn; column++) {
@@ -2277,7 +2396,7 @@ public class ReportGenerator {
         }
     }
 
-    private static boolean copyPreparedTables(String tableName) {
+    private static void copyPreparedTables(String tableName) throws AccessingFileException, CommunicateFileSystemException {
         String sourceFileName = "src/ua/andrewblake/prepared/".concat(tableName).concat(".xls");
         String productFileName = directory.concat("/").concat(tableName).concat(".xls");
         try (InputStream inFile = new FileInputStream(sourceFileName); OutputStream outFile = new FileOutputStream(productFileName)) {
@@ -2288,31 +2407,20 @@ public class ReportGenerator {
             }
             outFile.flush();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
+            throw new AccessingFileException(tableName.concat(".xls"));
         } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
+            throw new CommunicateFileSystemException();
         }
-        return true;
     }
 
-    private static boolean writeTable1() {
+    private static void writeTable1() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable1ThisYear();
         calculateStatisticTable1PreviousYear();
-        if (!copyPreparedTables("Table_1")) {
-            return false;
-        }
-        Workbook workbook = null;
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_1.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
+
+        copyPreparedTables("Table_1");
+
+        Workbook workbook = getWorkbook("Table_1");
+
         Sheet sheet = workbook.getSheetAt(0);
         Row row = sheet.getRow(1);
         Cell cell = row.getCell(1);
@@ -2438,40 +2546,15 @@ public class ReportGenerator {
             }
         }
 
-
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_1.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        writeWorkbook("Table_1", workbook);
     }
 
-    private static boolean writeTable2() {
+    private static void writeTable2() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable2();
         int column = 0;
-        Workbook workbook = null;
         for (int t = 1; t <= 9; t++) {
-            if (!copyPreparedTables("Table_2.".concat(String.valueOf(t)))) {
-                return false;
-            }
-
-
-            try {
-                workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_2.").concat(String.valueOf(t)).concat(".xls")));
-            } catch (IOException e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-                return false;
-            }
+            copyPreparedTables("Table_2.".concat(String.valueOf(t)));
+            Workbook workbook = getWorkbook("Table_2.".concat(String.valueOf(t)));
             Sheet sheet = workbook.getSheetAt(0);
             Row row = sheet.getRow(1);
             Cell cell = row.getCell(1);
@@ -2537,142 +2620,38 @@ public class ReportGenerator {
                 }
             }
 
-            try {
-                FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_2.").concat(String.valueOf(t)).concat(".xls"));
-                workbook.write(fos);
-                fos.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-                return false;
-            } catch (IOException e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-                return false;
-            }
-
+            writeWorkbook("Table_2.".concat(String.valueOf(t)), workbook);
         }
-        return true;
     }
 
-    private static boolean writeTable3_1() {
+    private static void writeTable3_1() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_1();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.1")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.1.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 3; row <= 19; row++) {
-            for (int column = 1; column <= 11; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_1[row][column] == 0 ? "-" : String.valueOf(table3_1[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.1.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.1");
+        Workbook workbook = getWorkbook("Table_3.1");
+        simpleSheetWrite(workbook, table3_1, 3, 19, 1, 11);
+        writeWorkbook("Table_3.1", workbook);
     }
 
-    private static boolean writeTable3_2() {
+    private static void writeTable3_2() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_2();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.2")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.2.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 3; row <= 6; row++) {
-            for (int column = 1; column <= 5; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_2[row][column] == 0 ? "-" : String.valueOf(table3_2[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.2.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.2");
+        Workbook workbook = getWorkbook("Table_3.2");
+        simpleSheetWrite(workbook, table3_2, 3, 6, 1, 5);
+        writeWorkbook("Table_3.2", workbook);
     }
 
-    private static boolean writeTable3_3() {
+    private static void writeTable3_3() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_3();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.3")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.3.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 3; row <= 14; row++) {
-            for (int column = 1; column <= 13; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_3[row][column] == 0 ? "-" : String.valueOf(table3_3[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.3.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.3");
+        Workbook workbook = getWorkbook("Table_3.3");
+        simpleSheetWrite(workbook, table3_3, 3, 14, 1, 13);
+        writeWorkbook("Table_3.3", workbook);
     }
 
-    private static boolean writeTable3_4() {
+    private static void writeTable3_4() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_4();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.4")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.4.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
+        copyPreparedTables("Table_3.4");
+        Workbook workbook = getWorkbook("Table_3.4");
         Sheet sheet = workbook.getSheetAt(0);
         for (int row = 4; row <= 29; row++) {
             if (row == 17) {
@@ -2682,341 +2661,168 @@ public class ReportGenerator {
                 sheet.getRow(row).getCell(column).setCellValue(table3_4[row][column] == 0 ? "-" : String.valueOf(table3_4[row][column]));
             }
         }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.4.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        writeWorkbook("Table_3.4", workbook);
     }
 
-    private static boolean writeTable3_6() {
+    private static void writeTable3_6() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_6();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.6")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.6.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 15; row++) {
-            for (int column = 1; column <= 8; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_6[row][column] == 0 ? "-" : String.valueOf(table3_6[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.6.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.6");
+        Workbook workbook = getWorkbook("Table_3.6");
+        simpleSheetWrite(workbook, table3_6, 4, 15, 1, 8);
+        writeWorkbook("Table_3.6", workbook);
     }
 
-    private static boolean writeTable3_7() {
+    private static void writeTable3_7() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_7();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.7")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.7.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 13; row++) {
-            for (int column = 1; column <= 7; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_7[row][column] == 0 ? "-" : String.valueOf(table3_7[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.7.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.7");
+        Workbook workbook = getWorkbook("Table_3.7");
+        simpleSheetWrite(workbook, table3_7, 4, 13, 1, 7);
+        writeWorkbook("Table_3.7", workbook);
     }
 
-    private static boolean writeTable3_8() {
+    private static void writeTable3_8() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_8();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.8")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.8.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 10; row++) {
-            for (int column = 1; column <= 7; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_8[row][column] == 0 ? "-" : String.valueOf(table3_8[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.8.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.8");
+        Workbook workbook = getWorkbook("Table_3.8");
+        simpleSheetWrite(workbook, table3_8, 4, 10, 1, 7);
+        writeWorkbook("Table_3.8", workbook);
     }
 
-    private static boolean writeTable3_9() {
+    private static void writeTable3_9() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_9();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.9")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.9.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 3; row <= 21; row++) {
-            for (int column = 1; column <= 12; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_9[row][column] == 0 ? "-" : String.valueOf(table3_9[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.9.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.9");
+        Workbook workbook = getWorkbook("Table_3.9");
+        simpleSheetWrite(workbook, table3_9, 3, 21, 1, 12);
+        writeWorkbook("Table_3.9", workbook);
     }
 
-    private static boolean writeTable3_9a() {
+    private static void writeTable3_9a() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_9a();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.9a")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.9a.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 22; row++) {
-            for (int column = 2; column <= 9; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_9a[row][column] == 0 ? "-" : String.valueOf(table3_9a[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.9a.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.9a");
+        Workbook workbook = getWorkbook("Table_3.9a");
+        simpleSheetWrite(workbook, table3_9a, 4, 22, 2, 9);
+        writeWorkbook("Table_3.9a", workbook);
     }
 
-    private static boolean writeTable3_10() {
+    private static void writeTable3_10() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_10();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.10")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.10.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 28; row++) {
-            for (int column = 1; column <= 10; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_10[row][column] == 0 ? "-" : String.valueOf(table3_10[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.10.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.10");
+        Workbook workbook = getWorkbook("Table_3.10");
+        simpleSheetWrite(workbook, table3_10, 4, 28, 1, 10);
+        writeWorkbook("Table_3.10", workbook);
     }
 
-    private static boolean writeTable3_11() {
+    private static void writeTable3_11() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_11();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.11")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.11.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 17; row++) {
-            for (int column = 1; column <= 3; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_11[row][column] == 0 ? "-" : String.valueOf(table3_11[row][column]));
-            }
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.11.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
+        copyPreparedTables("Table_3.11");
+        Workbook workbook = getWorkbook("Table_3.11");
+        simpleSheetWrite(workbook, table3_11, 4, 17, 1, 3);
+        writeWorkbook("Table_3.11", workbook);
     }
 
-    private static boolean writeTable3_12() {
+    private static void writeTable3_12() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_12();
+        copyPreparedTables("Table_3.12");
+        Workbook workbook = getWorkbook("Table_3.12");
+        simpleSheetWrite(workbook, table3_12, 4, 14, 1, 5);
+        writeWorkbook("Table_3.12", workbook);
+    }
+
+    private static void writeTable4_1() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_4.1");
+        Workbook workbook = getWorkbook("Table_4.1");
+        simpleSheetWrite(workbook, tables4and5[0], 8, 19, 2, 10);
+        writeWorkbook("Table_4.1", workbook);
+    }
+
+    private static void writeTable4_2() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_4.2");
+        Workbook workbook = getWorkbook("Table_4.2");
+        simpleSheetWrite(workbook, tables4and5[1], 8, 19, 2, 10);
+        writeWorkbook("Table_4.2", workbook);
+    }
+
+    private static void writeTable4_3() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_4.3");
+        Workbook workbook = getWorkbook("Table_4.3");
+        simpleSheetWrite(workbook, tables4and5[2], 8, 19, 2, 10);
+        writeWorkbook("Table_4.3", workbook);
+    }
+
+    private static void writeTable4_4() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_4.4");
+        Workbook workbook = getWorkbook("Table_4.4");
+        simpleSheetWrite(workbook, tables4and5[3], 8, 19, 2, 10);
+        writeWorkbook("Table_4.4", workbook);
+    }
+
+    private static void writeTable5_1() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_5.1");
+        Workbook workbook = getWorkbook("Table_5.1");
+        simpleSheetWrite(workbook, tables4and5[4], 8, 19, 2, 10);
+        writeWorkbook("Table_5.1", workbook);
+    }
+
+    private static void writeTable5_2() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_5.2");
+        Workbook workbook = getWorkbook("Table_5.2");
+        simpleSheetWrite(workbook, tables4and5[5], 8, 19, 2, 10);
+        writeWorkbook("Table_5.2", workbook);
+    }
+
+    private static void writeTable5_3() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_5.3");
+        Workbook workbook = getWorkbook("Table_5.3");
+        simpleSheetWrite(workbook, tables4and5[6], 8, 19, 2, 10);
+        writeWorkbook("Table_5.3", workbook);
+    }
+
+    private static void writeTable5_4() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_5.4");
+        Workbook workbook = getWorkbook("Table_5.4");
+        simpleSheetWrite(workbook, tables4and5[7], 8, 19, 2, 10);
+        writeWorkbook("Table_5.4", workbook);
+    }
+
+    private static void writeTable5_5() throws AccessingFileException, CommunicateFileSystemException {
+        copyPreparedTables("Table_5.5");
+        Workbook workbook = getWorkbook("Table_5.5");
+        simpleSheetWrite(workbook, tables4and5[8], 8, 19, 2, 10);
+        writeWorkbook("Table_5.5", workbook);
+    }
+
+    private static Workbook getWorkbook (String tableName) throws AccessingFileException, CommunicateFileSystemException {
         Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.12")) {
-            return false;
-        }
         try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.12.xls")));
+            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat(tableName).concat(".xls")));
+        } catch (FileNotFoundException e) {
+            throw new AccessingFileException(tableName.concat(".xls"));
         } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
+            throw new CommunicateFileSystemException();
         }
-        Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 14; row++) {
-            for (int column = 1; column <= 5; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_12[row][column] == 0 ? "-" : String.valueOf(table3_12[row][column]));
-            }
-        }
+        return workbook;
+    }
+
+    private static void writeWorkbook (String tableName, Workbook workbook) throws AccessingFileException, CommunicateFileSystemException {
         try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.12.xls"));
+            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat(tableName).concat(".xls"));
             workbook.write(fos);
             fos.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
+            throw new AccessingFileException(tableName.concat(".xls"));
         } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
+            throw new CommunicateFileSystemException();
         }
-        return true;
     }
 
-    /*private static int[][] calculateStatistic(String tableName) {
-
-    }
-
-    private static boolean simpleWrite(String tableName, int fromRow, int toRow, int fromColumn, int toColumn) {
-
-        calculateStatisticTable3_4();
-        Workbook workbook = null;
-        if (!copyPreparedTables("Table_3.6")) {
-            return false;
-        }
-        try {
-            workbook = new HSSFWorkbook(new FileInputStream(directory.concat("/").concat("Table_3.6.xls")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
+    private static void simpleSheetWrite(Workbook workbook, int[][] table, int beginRow, int lastRow, int beginColumn, int lastColumn) {
         Sheet sheet = workbook.getSheetAt(0);
-        for (int row = 4; row <= 14; row++) {
-            for (int column = 1; column <= 8; column++) {
-                sheet.getRow(row).getCell(column).setCellValue(table3_6[row][column] == 0 ? "-" : String.valueOf(table3_6[row][column]));
+        for (int row = beginRow; row <= lastRow; row++) {
+            for (int column = beginColumn; column <= lastColumn; column++) {
+                sheet.getRow(row).getCell(column).setCellValue(table[row][column] == 0 ? "-" : String.valueOf(table[row][column]));
             }
         }
-        try {
-            FileOutputStream fos = new FileOutputStream(directory.concat("/").concat("Table_3.6.xls"));
-            workbook.write(fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою");
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
-            return false;
-        }
-        return true;
-    }*/
+    }
 
 
 }

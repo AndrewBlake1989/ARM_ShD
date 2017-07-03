@@ -1,5 +1,7 @@
 package ua.andrewblake.panels;
 
+import ua.andrewblake.exceptions.AccessingFileException;
+import ua.andrewblake.exceptions.CommunicateFileSystemException;
 import ua.andrewblake.exceptions.FailedToCreateReportException;
 import ua.andrewblake.exceptions.FailureLoadDataFromDatabaseException;
 import ua.andrewblake.settings.GlobalSettings;
@@ -446,8 +448,14 @@ public class PanelReportGenerating extends JPanel {
                     JOptionPane.showMessageDialog(null, "Не вдалося створити звіт. Збій завантаження балів технічного оснащення з Бази Даних.");
                     break;
             }
+        } catch (AccessingFileException e) {
+            JOptionPane.showMessageDialog(null, "Помилка при спробі запису звітності. Доступ до файлу звітності може бути заблокований іншою програмою. Файл - \"".concat(e.getFileName()).concat("\"."));
+        } catch (CommunicateFileSystemException e) {
+            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
         } catch (FailedToCreateReportException e) {
             JOptionPane.showMessageDialog(null, "Не вдалося створити звіт.");
+        } catch (RuntimeException e) {
+            JOptionPane.showMessageDialog(null, "Збій внутрішньої логіки обчислення програми.");
         }
 
         buttonCreateReport.setVisible(true);

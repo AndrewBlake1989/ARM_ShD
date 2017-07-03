@@ -70,18 +70,6 @@ public class PanelListOfRecordsFromBase extends JPanel {
         this.add(labelFromYear);
         labelFromYear.setBounds(180, 33, 20, 14);
 
-//        textFieldFromYear = new JTextField();
-//        this.add(textFieldFromYear);
-//        textFieldFromYear.setBounds(220, 30, 30, 20);
-//        textFieldFromYear.addFocusListener(new java.awt.event.FocusAdapter() {
-//            public void focusLost(java.awt.event.FocusEvent evt) {
-//                textFieldFromYearFocusLost(evt);
-//            }
-//        });
-//        textFieldFromYear.addKeyListener(new java.awt.event.KeyAdapter() {
-//            public void keyPressed(KeyEvent evt) {textFieldFromYearKeyPressed(evt);}
-//        });
-
         comboBoxFromYear = new JComboBox<>(StringModels.getYears());
         this.add(comboBoxFromYear);
         comboBoxFromYear.setBounds(200, 30, 50, 20);
@@ -103,18 +91,6 @@ public class PanelListOfRecordsFromBase extends JPanel {
         labelToYear = new JLabel("Рік:");
         this.add(labelToYear);
         labelToYear.setBounds(410, 33, 20, 14);
-
-//        textFieldToYear = new JTextField();
-//        this.add(textFieldToYear);
-//        textFieldToYear.setBounds(430, 30, 30, 20);
-//        textFieldToYear.addFocusListener(new java.awt.event.FocusAdapter() {
-//            public void focusLost(java.awt.event.FocusEvent evt) {
-//                textFieldToYearFocusLost(evt);
-//            }
-//        });
-//        textFieldToYear.addKeyListener(new java.awt.event.KeyAdapter() {
-//            public void keyPressed(KeyEvent evt) {textFieldToYearKeyPressed(evt);}
-//        });
 
         comboBoxToYear = new JComboBox<>(StringModels.getYears());
         this.add(comboBoxToYear);
@@ -258,53 +234,9 @@ public class PanelListOfRecordsFromBase extends JPanel {
     public void fillCurrentDate() {
         comboBoxFromYear.setSelectedIndex(DateTime.getYearInt() - 2010);
         comboBoxToYear.setSelectedIndex(DateTime.getYearInt() - 2010);
-//        textFieldFromYear.setText(DateTime.getYearString());
-//        textFieldToYear.setText(DateTime.getYearString());
         comboBoxFromMonth.setSelectedIndex(DateTime.getMonthInt() - 1);
         comboBoxToMonth.setSelectedIndex(DateTime.getMonthInt() - 1);
     }
-
-//    private void textFieldFromYearFocusLost(FocusEvent evt) {
-//        try {
-//            if ((Integer.valueOf(textFieldFromYear.getText().trim()) < 1900) || (Integer.valueOf(textFieldFromYear.getText().trim()) > 2100) || (Integer.valueOf(textFieldFromYear.getText().trim()) > DateTime.getYearInt())) {
-//                JOptionPane.showMessageDialog(null, "Неправильно введено рік пошуку");
-//                textFieldFromYear.setText(DateTime.getYearString());
-//                return;
-//            }
-//            refresh();
-//        } catch (NumberFormatException ex) {
-//            JOptionPane.showMessageDialog(null, "Неправильно введено рік пошуку");
-//            textFieldFromYear.setText(DateTime.getYearString());
-//        }
-//    }
-//
-//    private void textFieldFromYearKeyPressed(KeyEvent evt) {
-//        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-//            textFieldFromYearFocusLost(null);
-//            labelFilter.requestFocus();
-//        }
-//    }
-//
-//    private void textFieldToYearFocusLost(FocusEvent evt) {
-//        try {
-//            if ((Integer.valueOf(textFieldToYear.getText().trim()) < 1900) || (Integer.valueOf(textFieldToYear.getText().trim()) > 2100) || (Integer.valueOf(textFieldToYear.getText().trim()) > DateTime.getYearInt())) {
-//                JOptionPane.showMessageDialog(null, "Неправильно введено рік пошуку");
-//                textFieldToYear.setText(DateTime.getYearString());
-//                return;
-//            }
-//            refresh();
-//        } catch (NumberFormatException ex) {
-//            JOptionPane.showMessageDialog(null, "Неправильно введено рік пошуку");
-//            textFieldToYear.setText(DateTime.getYearString());
-//        }
-//    }
-//
-//    private void textFieldToYearKeyPressed(KeyEvent evt) {
-//        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-//            textFieldToYearFocusLost(null);
-//            labelFilter.requestFocus();
-//        }
-//    }
 
     private void comboBoxFromYearActionPerformed(ActionEvent evt) {
         refresh();
@@ -490,7 +422,7 @@ public class PanelListOfRecordsFromBase extends JPanel {
             stringBuilder.append(comboBoxDistance.getSelectedIndex() == 0 ? "" : "AND dist = ".concat(String.valueOf(comboBoxDistance.getSelectedIndex())).concat(" "));
             stringBuilder.append(comboBoxDepartment.getSelectedIndex() == 0 ? "" : "AND department = ".concat(String.valueOf(comboBoxDepartment.getSelectedIndex())).concat(" "));
             stringBuilder.append(checkBoxShowDeleted.isSelected() ? "" : "AND deleted = 0");
-            stringBuilder.append(" ORDER BY date;");
+            stringBuilder.append(" ORDER BY date, number_of_record;");
             res = statement.executeQuery(stringBuilder.toString());
             int i = 0;
             while (res.next()) {

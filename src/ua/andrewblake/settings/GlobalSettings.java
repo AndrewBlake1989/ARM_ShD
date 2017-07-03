@@ -16,6 +16,7 @@ public class GlobalSettings {
     private static Stat currentStat;
 
     private static PanelNoConnection panelNoConnection;
+    private static PanelConnectionSettings panelConnectionSettings;
     private static PanelAuthorization panelAuthorization;
     private static PanelMain panelMain;
     private static PanelIntroductionError panelIntroductionError;
@@ -97,6 +98,14 @@ public class GlobalSettings {
 
     public static void setPanelNoConnection(PanelNoConnection panelNoConnection) {
         GlobalSettings.panelNoConnection = panelNoConnection;
+    }
+
+    public static PanelConnectionSettings getPanelConnectionSettings() {
+        return panelConnectionSettings;
+    }
+
+    public static void setPanelConnectionSettings(PanelConnectionSettings panelConnectionSettings) {
+        GlobalSettings.panelConnectionSettings = panelConnectionSettings;
     }
 
     public static PanelAuthorization getPanelAuthorization() {

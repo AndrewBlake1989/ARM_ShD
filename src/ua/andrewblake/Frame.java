@@ -11,6 +11,7 @@ import java.awt.event.WindowAdapter;
 public class Frame extends JFrame {
 
     PanelNoConnection panelNoConnection = new PanelNoConnection();
+    PanelConnectionSettings panelConnectionSettings = new PanelConnectionSettings();
     PanelMain panelMain = new PanelMain();
     PanelAuthorization panelAuthorization = new PanelAuthorization();
     PanelIntroductionError panelIntroductionError = new PanelIntroductionError();
@@ -41,6 +42,7 @@ public class Frame extends JFrame {
         });
 
         this.add(panelNoConnection);
+        this.add(panelConnectionSettings);
         this.add(panelAuthorization);
         this.add(panelMain);
         this.add(panelIntroductionError);
