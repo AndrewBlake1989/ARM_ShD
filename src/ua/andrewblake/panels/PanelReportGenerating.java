@@ -293,7 +293,7 @@ public class PanelReportGenerating extends JPanel {
 
     private void buttonCreateReportActionPerformed(java.awt.event.ActionEvent evt) {
 
-        int result = fileChooser.showOpenDialog(this);
+        int result = fileChooser.showSaveDialog(this);
         File file;
         if (result == JFileChooser.APPROVE_OPTION) {
             file = fileChooser.getSelectedFile();

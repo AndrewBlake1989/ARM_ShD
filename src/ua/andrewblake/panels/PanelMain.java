@@ -29,6 +29,10 @@ public class PanelMain extends JPanel {
 
     private JSeparator separator3OnPanelMain;
 
+    private JButton buttonDatabaseAdministration;
+
+    private JSeparator separator4OnPanelMain;
+
     private JButton buttonChangeUserOnPanelMain;
     private JButton buttonExitOnPanelMain;
 
@@ -45,10 +49,9 @@ public class PanelMain extends JPanel {
         this.setSize(800, 600);
         this.setLayout(null);
 
-        pictureOnPanelMain = new JLabel();
+        pictureOnPanelMain = new JLabel(new ImageIcon("src/ua/andrewblake/resources/MainImage.jpg"));
         this.add(pictureOnPanelMain);
         pictureOnPanelMain.setBounds(0, 0, 610, 385);
-        pictureOnPanelMain.setIcon(new ImageIcon("src/ua/andrewblake/resources/MainImage.jpg"));
 
         labelErrorsOnPanelMain = new JLabel("            Несправності:");
         this.add(labelErrorsOnPanelMain);
@@ -89,31 +92,39 @@ public class PanelMain extends JPanel {
 
         separator2OnPanelMain = new JSeparator();
         this.add(separator2OnPanelMain);
-        separator2OnPanelMain.setBounds(625, 310, 150, 5);
+        separator2OnPanelMain.setBounds(625, 300, 150, 5);
 
         buttonCreateReportOnPanelMain = new JButton("Формування звіту");
         this.add(buttonCreateReportOnPanelMain);
-        buttonCreateReportOnPanelMain.setBounds(625, 340, 150, 25);
+        buttonCreateReportOnPanelMain.setBounds(625, 325, 150, 25);
         buttonCreateReportOnPanelMain.addActionListener(this::buttonCreateReportOnPanelMainActionPerformed);
 
         separator3OnPanelMain = new JSeparator();
         this.add(separator3OnPanelMain);
-        separator3OnPanelMain.setBounds(625, 390, 150, 5);
+        separator3OnPanelMain.setBounds(625, 370, 150, 5);
+
+        buttonDatabaseAdministration = new JButton("Адміністрування БД");
+        this.add(buttonDatabaseAdministration);
+        buttonDatabaseAdministration.setBounds(625, 395, 150, 25);
+        buttonDatabaseAdministration.addActionListener(this::buttonDatabaseAdministrationActionPerformed);
+
+        separator4OnPanelMain = new JSeparator();
+        this.add(separator4OnPanelMain);
+        separator4OnPanelMain.setBounds(625, 440, 150, 5);
 
         buttonChangeUserOnPanelMain = new JButton("Змінити користувача");
         this.add(buttonChangeUserOnPanelMain);
-        buttonChangeUserOnPanelMain.setBounds(625, 420, 150, 25);
+        buttonChangeUserOnPanelMain.setBounds(625, 465, 150, 25);
         buttonChangeUserOnPanelMain.addActionListener(this::buttonChangeUserOnPanelMainActionPerformed);
 
         buttonExitOnPanelMain = new JButton("Вихід");
         this.add(buttonExitOnPanelMain);
-        buttonExitOnPanelMain.setBounds(625, 460, 150, 25);
+        buttonExitOnPanelMain.setBounds(625, 505, 150, 25);
         buttonExitOnPanelMain.addActionListener(this::buttonExitOnPanelMainActionPerformed);
 
-        labelUserStatus1OnPanelMain = new JLabel();
+        labelUserStatus1OnPanelMain = new JLabel("Поточний користувач:");
         this.add(labelUserStatus1OnPanelMain);
         labelUserStatus1OnPanelMain.setBounds(10, 425, 200, 15);
-        labelUserStatus1OnPanelMain.setText("Поточний користувач:");
 
         labelUserStatus2OnPanelMain = new JLabel();
         this.add(labelUserStatus2OnPanelMain);
@@ -125,20 +136,18 @@ public class PanelMain extends JPanel {
         labelUserStatus3OnPanelMain.setBounds(10, 455, 500, 15);
         labelUserStatus3OnPanelMain.setText("");
 
-        labelUserStatus4OnPanelMain = new JLabel();
+        labelUserStatus4OnPanelMain = new JLabel("Права адміністратора:");
         this.add(labelUserStatus4OnPanelMain);
         labelUserStatus4OnPanelMain.setBounds(10, 485, 200, 15);
-        labelUserStatus4OnPanelMain.setText("Права адміністратора:");
 
         labelUserStatus5OnPanelMain = new JLabel();
         this.add(labelUserStatus5OnPanelMain);
         labelUserStatus5OnPanelMain.setBounds(10, 500, 200, 15);
         labelUserStatus5OnPanelMain.setText("");
 
-        labelProgramStatus1OnPanelMain = new JLabel();
+        labelProgramStatus1OnPanelMain = new JLabel("Версія програми:");
         this.add(labelProgramStatus1OnPanelMain);
         labelProgramStatus1OnPanelMain.setBounds(10, 530, 200, 15);
-        labelProgramStatus1OnPanelMain.setText("Версія програми:");
 
         labelProgramStatus2OnPanelMain = new JLabel();
         this.add(labelProgramStatus2OnPanelMain);
@@ -195,6 +204,11 @@ public class PanelMain extends JPanel {
         this.setVisible(false);
         GlobalSettings.getPanelReportGenerating().setVisible(true);
         GlobalSettings.getPanelReportGenerating().reset();
+    }
+
+    private void buttonDatabaseAdministrationActionPerformed(java.awt.event.ActionEvent evt) {
+        this.setVisible(false);
+        GlobalSettings.getPanelDatabaseAdministration().setVisible(true);
     }
 
 

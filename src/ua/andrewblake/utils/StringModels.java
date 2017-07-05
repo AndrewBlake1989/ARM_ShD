@@ -186,10 +186,18 @@ public class StringModels {
     }
 
     // MySQL Date:
-    public static String[] getAllStations() {
-        if (allStations != null) { return allStations; }
-        allStations = getFromDB("stations", 0);
-        return allStations;
+    public static void resetStations() {
+        shch1Stations = null;
+        shch2Stations = null;
+        shch3Stations = null;
+        shch4Stations = null;
+        shch5Stations = null;
+        shch6Stations = null;
+        shch8Stations = null;
+        shch9Stations = null;
+        shch10Stations = null;
+        shch11Stations = null;
+        shch12Stations = null;
     }
 
     public static String[] getShch1Stations() {
@@ -258,10 +266,18 @@ public class StringModels {
         return shch12Stations;
     }
 
-    public static String[] getAllPeregons() {
-        if (allPeregons != null) { return allPeregons; }
-        allPeregons = getFromDB("peregons", 0);
-        return allPeregons;
+    public static void resetPeregons() {
+        shch1Peregons = null;
+        shch2Peregons = null;
+        shch3Peregons = null;
+        shch4Peregons = null;
+        shch5Peregons = null;
+        shch6Peregons = null;
+        shch8Peregons = null;
+        shch9Peregons = null;
+        shch10Peregons = null;
+        shch11Peregons = null;
+        shch12Peregons = null;
     }
 
     public static String[] getShch1Peregons() {

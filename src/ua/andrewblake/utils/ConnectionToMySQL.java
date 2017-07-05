@@ -31,7 +31,6 @@ public class ConnectionToMySQL {
                 stringBuilder.append(connectionSettings.port);
                 stringBuilder.append("/");
                 stringBuilder.append(connectionSettings.nameDB);
-//                connectionToMySQL = DriverManager.getConnection("jdbc:mysql://localhost:3306/arm_shd_database", "root", "password");
                 connectionToMySQL = DriverManager.getConnection(stringBuilder.toString(), connectionSettings.username, connectionSettings.password);
             } catch (SQLException e) {
                 e.printStackTrace();

@@ -6,6 +6,8 @@ import ua.andrewblake.settings.GlobalSettings;
 
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.io.*;
+import java.sql.Blob;
+import java.sql.SQLException;
 
 public class SerializeToBlob {
 
@@ -22,8 +24,9 @@ public class SerializeToBlob {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
-        SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
     }
 
     public static Stat deserialize() {
@@ -38,9 +41,33 @@ public class SerializeToBlob {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
-        SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         return stat;
+    }
+
+    public static Stat fromBlobToStat(Blob blob) {
+        SkinUtil.changeSkin(GlobalSettings.getFrame(), new MetalLookAndFeel());
+        try {
+            Blob file = blob;
+            InputStream x = file.getBinaryStream();
+            int size = x.available();
+            byte b[] = new byte[size];
+            x.read(b);
+            try (OutputStream targetFile = new FileOutputStream("src/ua/andrewblake/save/SaveStatToBlob.svf")) {
+                targetFile.write(b);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
+        }
+        return SerializeToBlob.deserialize();
     }
 
 }

@@ -31,7 +31,7 @@ public class GlobalSettings {
     private static PanelCatalogueUsers panelCatalogueUsers;
     private static PanelReportGenerating panelReportGenerating;
     private static PanelCatalogueEquipmentTechnicalPoints panelCatalogueEquipmentTechnicalPoints;
-
+    private static PanelDatabaseAdministration panelDatabaseAdministration;
 
 
 
@@ -218,5 +218,13 @@ public class GlobalSettings {
 
     public static void setPanelCatalogueEquipmentTechnicalPoints(PanelCatalogueEquipmentTechnicalPoints panelCatalogueEquipmentTechnicalPoints) {
         GlobalSettings.panelCatalogueEquipmentTechnicalPoints = panelCatalogueEquipmentTechnicalPoints;
+    }
+
+    public static PanelDatabaseAdministration getPanelDatabaseAdministration() {
+        return panelDatabaseAdministration;
+    }
+
+    public static void setPanelDatabaseAdministration(PanelDatabaseAdministration panelDatabaseAdministration) {
+        GlobalSettings.panelDatabaseAdministration = panelDatabaseAdministration;
     }
 }

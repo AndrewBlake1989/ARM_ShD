@@ -460,7 +460,6 @@ public class PanelIntroductionError extends JPanel implements GetData {
         }
     }
 
-
     @Override
     public boolean canContinue() {
         if (comboBoxDist.getSelectedIndex() == 0) {

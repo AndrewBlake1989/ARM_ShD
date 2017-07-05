@@ -20,10 +20,9 @@ public class PanelViewOrEditCatalogues extends JPanel {
         this.setSize(800, 600);
         this.setLayout(null);
 
-        labelImage = new JLabel();
+        labelImage = new JLabel(new ImageIcon("src/ua/andrewblake/resources/Catalogue.jpg"));
         this.add(labelImage);
         labelImage.setBounds(-60, 0, 670, 520);
-        labelImage.setIcon(new ImageIcon("src/ua/andrewblake/resources/Catalogue.jpg"));
 
         labelCatalogue = new JLabel("Довідники:");
         this.add(labelCatalogue);

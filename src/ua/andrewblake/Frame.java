@@ -26,6 +26,7 @@ public class Frame extends JFrame {
     PanelCatalogueUsers panelCatalogueUsers;
     PanelReportGenerating panelReportGenerating = new PanelReportGenerating();
     PanelCatalogueEquipmentTechnicalPoints panelCatalogueEquipmentTechnicalPoints;
+    PanelDatabaseAdministration panelDatabaseAdministration = new PanelDatabaseAdministration();
 
     public Frame() {
 
@@ -55,12 +56,13 @@ public class Frame extends JFrame {
         this.add(panelCatalogueStations);
         this.add(panelCataloguePeregons);
         this.add(panelReportGenerating);
+        this.add(panelDatabaseAdministration);
 
         GlobalSettings.setFrame(this);
 
         pack();
 
-        if (GlobalSettings.isAvailabilityConnectionWithBD() == false) {
+        if (!GlobalSettings.isAvailabilityConnectionWithBD()) {
             panelNoConnection.setVisible(true);
         } else {
             panelAuthorization.setVisible(true);

@@ -232,6 +232,7 @@ public class PanelCataloguePeregons extends JPanel {
         comboBoxDistAdd.setVisible(false);
         buttonOk.setVisible(false);
         buttonRepair.setVisible(false);
+        checkBoxShowDeleted.setVisible(true);
     }
 
     private void comboBoxDistActionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +280,7 @@ public class PanelCataloguePeregons extends JPanel {
             comboBoxDistAdd.setVisible(false);
             buttonOk.setVisible(false);
             buttonAdd.setText("Додати");
+            checkBoxShowDeleted.setVisible(true);
             buttonEdit.setVisible(true);
         } else {
             textFieldPeregonName.setVisible(true);
@@ -287,6 +289,7 @@ public class PanelCataloguePeregons extends JPanel {
             buttonOk.setText("Додати");
             buttonAdd.setText("Відміна");
             buttonEdit.setVisible(false);
+            checkBoxShowDeleted.setVisible(false);
         }
 
     }
@@ -302,6 +305,7 @@ public class PanelCataloguePeregons extends JPanel {
         buttonOk.setText("Редагувати");
         buttonAdd.setText("Відміна");
         buttonEdit.setVisible(false);
+        checkBoxShowDeleted.setVisible(false);
         nameBeforeEdit = String.valueOf(tablePeregons.getValueAt(tablePeregons.getSelectedRow(), 0));
         shchBeforeEdit = String.valueOf(tablePeregons.getValueAt(tablePeregons.getSelectedRow(), 1));
         textFieldPeregonName.setText(nameBeforeEdit);
@@ -334,6 +338,7 @@ public class PanelCataloguePeregons extends JPanel {
                 preparedStatement.setInt(2, comboBoxDistAdd.getSelectedIndex());
                 preparedStatement.execute();
                 preparedStatement.execute("UNLOCK TABLES;");
+                StringModels.resetPeregons();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -352,6 +357,7 @@ public class PanelCataloguePeregons extends JPanel {
                 preparedStatement.setInt(4, Integer.valueOf(shchBeforeEdit) < 7 ? Integer.valueOf(shchBeforeEdit) : Integer.valueOf(shchBeforeEdit) - 1);
                 preparedStatement.executeUpdate();
                 preparedStatement.execute("UNLOCK TABLES;");
+                StringModels.resetPeregons();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -381,6 +387,7 @@ public class PanelCataloguePeregons extends JPanel {
             preparedStatement.setString(1, textFieldSelectedPeregon.getText());
             preparedStatement.executeUpdate();
             preparedStatement.execute("UNLOCK TABLES;");
+            StringModels.resetPeregons();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -399,6 +406,7 @@ public class PanelCataloguePeregons extends JPanel {
             preparedStatement.setString(1, textFieldSelectedPeregon.getText());
             preparedStatement.executeUpdate();
             preparedStatement.execute("UNLOCK TABLES;");
+            StringModels.resetPeregons();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

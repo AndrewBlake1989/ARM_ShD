@@ -232,6 +232,7 @@ public class PanelCatalogueStations extends JPanel {
         comboBoxDistAdd.setVisible(false);
         buttonOk.setVisible(false);
         buttonRepair.setVisible(false);
+        checkBoxShowDeleted.setVisible(true);
     }
 
     private void comboBoxDistActionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +280,7 @@ public class PanelCatalogueStations extends JPanel {
             comboBoxDistAdd.setVisible(false);
             buttonOk.setVisible(false);
             buttonAdd.setText("Додати");
+            checkBoxShowDeleted.setVisible(true);
             buttonEdit.setVisible(true);
         } else {
             textFieldStationName.setVisible(true);
@@ -286,6 +288,7 @@ public class PanelCatalogueStations extends JPanel {
             buttonOk.setVisible(true);
             buttonOk.setText("Додати");
             buttonAdd.setText("Відміна");
+            checkBoxShowDeleted.setVisible(false);
             buttonEdit.setVisible(false);
         }
 
@@ -302,6 +305,7 @@ public class PanelCatalogueStations extends JPanel {
         buttonOk.setText("Редагувати");
         buttonAdd.setText("Відміна");
         buttonEdit.setVisible(false);
+        checkBoxShowDeleted.setVisible(false);
         nameBeforeEdit = String.valueOf(tableStations.getValueAt(tableStations.getSelectedRow(), 0));
         shchBeforeEdit = String.valueOf(tableStations.getValueAt(tableStations.getSelectedRow(), 1));
         textFieldStationName.setText(nameBeforeEdit);
@@ -335,6 +339,7 @@ public class PanelCatalogueStations extends JPanel {
                 preparedStatement.setInt(2, comboBoxDistAdd.getSelectedIndex());
                 preparedStatement.execute();
                 preparedStatement.execute("UNLOCK TABLES;");
+                StringModels.resetStations();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -353,6 +358,7 @@ public class PanelCatalogueStations extends JPanel {
                 preparedStatement.setInt(4, Integer.valueOf(shchBeforeEdit) < 7 ? Integer.valueOf(shchBeforeEdit) : Integer.valueOf(shchBeforeEdit) - 1);
                 preparedStatement.executeUpdate();
                 preparedStatement.execute("UNLOCK TABLES;");
+                StringModels.resetStations();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -382,6 +388,7 @@ public class PanelCatalogueStations extends JPanel {
             preparedStatement.setString(1, textFieldSelectedStation.getText());
             preparedStatement.executeUpdate();
             preparedStatement.execute("UNLOCK TABLES;");
+            StringModels.resetStations();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -400,6 +407,7 @@ public class PanelCatalogueStations extends JPanel {
             preparedStatement.setString(1, textFieldSelectedStation.getText());
             preparedStatement.executeUpdate();
             preparedStatement.execute("UNLOCK TABLES;");
+            StringModels.resetStations();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

@@ -3,7 +3,6 @@ CREATE TABLE `arm_shd_database`.`peregons` (
   `name` VARCHAR(100) NOT NULL,
   `shch` INT UNSIGNED NOT NULL,
   `closed` TINYINT NOT NULL DEFAULT 0,
-  `comment` VARCHAR(500) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC),
