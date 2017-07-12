@@ -6,15 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e588338-4d1e-4679-a9b2-55dd1ea638a5" name="Default" comment="">
+    <list default="true" id="0e588338-4d1e-4679-a9b2-55dd1ea638a5" name="Default" comment="2017-07-05">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.1.xls" afterPath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.1.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.7.xls" afterPath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.7.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.8.xls" afterPath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_2.8.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_3.1.xls" afterPath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_3.1.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_3.3.xls" afterPath="$PROJECT_DIR$/src/ua/andrewblake/prepared/Table_3.3.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/save/SaveStatToBlob.svf" afterPath="$PROJECT_DIR$/src/ua/andrewblake/save/SaveStatToBlob.svf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCataloguePeregons.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCataloguePeregons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueStations.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueStations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelListOfRecordsFromBase.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelListOfRecordsFromBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/temporary/SerializeVRS.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/temporary/SerializeVRS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" afterPath="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +75,6 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelPreviousView.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueUsers.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentOther.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/version/Version.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/settings/ConnectionSettings.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelNoConnection.java" />
@@ -79,7 +82,6 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/SerializeConnectionSettings.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/exceptions/CommunicateFileSystemException.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/exceptions/AccessingFileException.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/settings/GlobalSettings.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelViewOrEditCatalogues.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/Frame.java" />
@@ -98,12 +100,14 @@
         <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/SerializeToBDB.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/RestoreDB.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelDatabaseAdministration.java" />
-        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelMain.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelListOfRecordsFromBase.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCatalogueStations.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelCataloguePeregons.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java" />
+        <option value="$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java" />
         <option value="$PROJECT_DIR$/src/ua/andrewblake/temporary/SerializeVRS.java" />
       </list>
     </option>
@@ -385,8 +389,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="G:/Project/ARM_ShD" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="FinalizerThread&#9;PSI&#9;JAVA://java.lang.ref.Finalizer.FinalizerThread&#10;Thread&#9;PSI&#9;JAVA://com.sun.jmx.snmp.ThreadContext&#10;WindowsLoo&#9;PSI&#9;JAVA://com.sun.java.swing.plaf.windows.WindowsLookAndFeel&#10;Look&#9;PSI&#9;JAVA://javax.swing.LookAndFeel&#10;XPS&#9;PSI&#9;JAVA://com.sun.java.swing.plaf.windows.XPStyle&#10;TableMo&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_112/jre/lib/rt.jar!/javax/swing/table/TableModel.class&#10;interfa&#9;PSI&#9;JAVA://com.sun.xml.internal.bind.InternalAccessorFactory" />
@@ -811,13 +815,35 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29335073" sideWeight="0.505" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288948" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27906978" sideWeight="0.495" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3095588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31942633" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -834,7 +860,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -850,31 +876,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelNoConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="56" column="93" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-744">
-          <caret line="572" column="134" lean-forward="false" selection-start-line="572" selection-start-column="134" selection-end-line="572" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentSh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="4846" column="52" lean-forward="false" selection-start-line="4846" selection-start-column="22" selection-end-line="4846" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -914,20 +919,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/SerializeToVRS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/Blob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/Blob.java" />
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/ConnectionToMySQL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1034,13 +1026,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/temporary/DeleteFromTables.java" />
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelReportGenerating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="440" column="74" lean-forward="true" selection-start-line="440" selection-start-column="12" selection-end-line="440" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/save/BackupDataBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1104,25 +1089,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="2365" column="45" lean-forward="false" selection-start-line="2365" selection-start-column="45" selection-end-line="2365" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelDatabaseAdministration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="105" column="93" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/save/Stat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,14 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="129" column="108" lean-forward="true" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="348" column="28" lean-forward="false" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1159,18 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
-          <folding>
-            <element signature="method#buttonCreateErrorOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonViewErrorOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonEditErrorOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonViewCatalogueOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonEditCatalogueOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonCreateReportOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonDatabaseAdministrationActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonChangeUserOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#buttonExitOnPanelMainActionPerformed#0;class#PanelMain#0" expanded="false" />
-            <element signature="method#drawUserData#0;class#PanelMain#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,13 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="236" column="19" lean-forward="true" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/temporary/SerializeVRS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1206,6 +1149,130 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="462" column="5" lean-forward="true" selection-start-line="457" selection-start-column="4" selection-end-line="462" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/StringModels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="84" column="250" lean-forward="false" selection-start-line="84" selection-start-column="250" selection-end-line="84" selection-end-column="250" />
+          <folding>
+            <element signature="e#28333#28334#0" expanded="false" />
+            <element signature="e#28384#28385#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelObjectsAndReasonsByDepartmentSh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="4008" column="56" lean-forward="false" selection-start-line="4008" selection-start-column="56" selection-end-line="4008" selection-end-column="56" />
+          <folding>
+            <element signature="method#comboBoxElement2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#comboBoxReason1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#comboBoxReason1_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#comboBoxReason1_additionally_2ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#comboBoxReason2_additionally_1ActionPerformed#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#canContinue#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#getSimple#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#getParams#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+            <element signature="method#fillParams#0;class#PanelObjectsAndReasonsByDepartmentSh#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelReportGenerating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="440" column="74" lean-forward="true" selection-start-line="440" selection-start-column="12" selection-end-line="440" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/save/Stat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelIntroductionError2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2435">
+          <caret line="301" column="31" lean-forward="false" selection-start-line="301" selection-start-column="31" selection-end-line="301" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/ReportGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="2421" column="100" lean-forward="false" selection-start-line="2421" selection-start-column="100" selection-end-line="2421" selection-end-column="100" />
+          <folding>
+            <element signature="method#takeRecords#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#makeStats#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#getEquipmentTechnicalPoints#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#resetTables#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#fillTablesZeroValues#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#fillTablesZeroValues#1;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable1ThisYear#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable1PreviousYear#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable2#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_1#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_2#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_3#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_4#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_6#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_7#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_8#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_9#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_9a#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_10#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_11#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTable3_12#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateStatisticTables4and5#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#calculateTotal#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#copyPreparedTables#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable1#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable2#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_1#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_2#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_3#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_4#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_6#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_7#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_8#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_9#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_9a#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_10#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_11#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable3_12#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable4_1#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable4_2#0;class#ReportGenerator#0" expanded="false" />
+            <element signature="method#writeTable4_3#0;class#ReportGenerator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/utils/SerializeToVRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/temporary/SerializeVRS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/andrewblake/panels/PanelNoConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,7 +1335,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

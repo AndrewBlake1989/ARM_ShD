@@ -287,19 +287,19 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
 
 
 
-        checkBox5 = new JCheckBox("Брак", false);
+        checkBox5 = new JCheckBox("Інцидент", false);
         this.add(checkBox5);
-        checkBox5.setBounds(410, 30, 50, 25);
+        checkBox5.setBounds(410, 30, 150, 25);
         checkBox5.addActionListener(this::checkBox5ActionPerformed);
 
-        label5_1 = new JLabel("Брак");
+        label5_1 = new JLabel("Інцидент");
         this.add(label5_1);
-        label5_1.setBounds(10, 463, 25, 15);
+        label5_1.setBounds(10, 463, 60, 15);
         label5_1.setEnabled(false);
 
         comboBox5_1 = new JComboBox<>(new String[]{"особливого обліку", "інший"});
         this.add(comboBox5_1);
-        comboBox5_1.setBounds(40, 460, 120, 20);
+        comboBox5_1.setBounds(70, 460, 120, 20);
         comboBox5_1.setEnabled(false);
 
 

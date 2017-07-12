@@ -322,6 +322,9 @@ public class ReportGenerator {
                                     thisYearTable1[2][stat.dist]++;
                                 }
                             }
+                            if (stat.paramsPanelIntroductionError2[4].equals("true")) {
+                                thisYearTable1[38][stat.dist]++;
+                            }
                             break;
                         case "2": // Відмови по службі П
                             department = P;
@@ -487,6 +490,9 @@ public class ReportGenerator {
                                 if ((s1[0].equals("comboBoxShObjects")) && (s1[1].equals("9"))) { // в т.ч. Рейкові кола
                                     previousYearTable1[2][stat.dist]++;
                                 }
+                            }
+                            if (stat.paramsPanelIntroductionError2[4].equals("true")) {
+                                previousYearTable1[38][stat.dist]++;
                             }
                             break;
                         case "2": // Відмови по службі П
