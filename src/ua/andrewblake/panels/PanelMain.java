@@ -6,7 +6,9 @@ import ua.andrewblake.utils.SerializeToVRS;
 import ua.andrewblake.version.Version;
 
 import javax.swing.*;
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class PanelMain extends JPanel {
 
@@ -210,7 +212,6 @@ public class PanelMain extends JPanel {
         this.setVisible(false);
         GlobalSettings.getPanelDatabaseAdministration().setVisible(true);
     }
-
 
     private void buttonChangeUserOnPanelMainActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);

@@ -175,11 +175,12 @@ public class PanelCatalogueStations extends JPanel {
 
     }
 
-    public void viewOrEdit(boolean edit) {
+    void viewOrEdit(boolean edit) {
         this.edit = edit;
     }
 
     void refresh() {
+        comboBoxDist.setEnabled(true);
         try {
             Connection connection = ConnectionToMySQL.getConnectionToMySQL();
             Statement statement = connection.createStatement();
@@ -233,6 +234,14 @@ public class PanelCatalogueStations extends JPanel {
         buttonOk.setVisible(false);
         buttonRepair.setVisible(false);
         checkBoxShowDeleted.setVisible(true);
+        whatShCh();
+    }
+
+    private void whatShCh() {
+        if ((GlobalSettings.getUserPosition() > 3) && (GlobalSettings.getUserPosition() < 16)) {
+            comboBoxDist.setSelectedIndex(GlobalSettings.getUserPosition() - 3);
+            comboBoxDist.setEnabled(false);
+        }
     }
 
     private void comboBoxDistActionPerformed(java.awt.event.ActionEvent evt) {

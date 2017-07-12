@@ -471,6 +471,7 @@ public class PanelListOfRecordsFromBase extends JPanel {
     }
 
     public void reset(boolean edit) {
+        comboBoxDistance.setEnabled(true);
         comboBoxDistance.setSelectedIndex(0);
         comboBoxDepartment.setSelectedIndex(0);
         checkBoxShowDeleted.setSelected(false);
@@ -486,6 +487,14 @@ public class PanelListOfRecordsFromBase extends JPanel {
         tableRecords.getSelectionModel().clearSelection();
         textAreaShowSimple.setText("");
         currentStat = null;
+        whatShCh();
+    }
+
+    private void whatShCh() {
+        if ((GlobalSettings.getUserPosition() > 3) && (GlobalSettings.getUserPosition() < 16)) {
+            comboBoxDistance.setSelectedIndex(GlobalSettings.getUserPosition() - 3);
+            comboBoxDistance.setEnabled(false);
+        }
     }
 
     private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {

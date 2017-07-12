@@ -446,15 +446,17 @@ public class PanelIntroductionError extends JPanel implements GetData {
         comboBoxStationOrPeregon.setSelectedIndex(0);
         ((PanelTypeOfDeviceOnPanelIntroductionError) panelTypeOfDevice).reset();
         comboBoxDepartment.setSelectedIndex(0);
-        whatShCh();
         comboBoxBeginningYear.setEnabled(true);
         comboBoxBeginningMonth.setEnabled(true);
         comboBoxBeginningDay.setEnabled(true);
+        comboBoxStationOrPeregonName.setEnabled(true);
+        comboBoxStationOrPeregon.setEnabled(true);
+        comboBoxDist.setEnabled(true);
+        whatShCh();
     }
 
     private void whatShCh() {
-        System.out.println(GlobalSettings.getUserPosition());
-        if (GlobalSettings.getUserPosition() > 3) {
+        if ((GlobalSettings.getUserPosition() > 3) && (GlobalSettings.getUserPosition() < 16)) {
             comboBoxDist.setSelectedIndex(GlobalSettings.getUserPosition() - 3);
             comboBoxDist.setEnabled(false);
         }
@@ -574,8 +576,10 @@ public class PanelIntroductionError extends JPanel implements GetData {
         params[10][1] = String.valueOf(comboBoxDist.getSelectedIndex());
         params[11][0] = "comboBoxStationOrPeregon";
         params[11][1] = String.valueOf(comboBoxStationOrPeregon.getSelectedIndex());
-        params[12][0] = "comboBoxStationOrPeregonName";
-        params[12][1] = String.valueOf(comboBoxStationOrPeregonName.getSelectedIndex());
+//        params[12][0] = "comboBoxStationOrPeregonName";
+//        params[12][1] = String.valueOf(comboBoxStationOrPeregonName.getSelectedIndex());
+        params[12][0] = "comboBoxStationOrPeregonName2";
+        params[12][1] = (String) comboBoxStationOrPeregonName.getSelectedItem();
         params[13][0] = "comboBoxDepartment";
         params[13][1] = String.valueOf(comboBoxDepartment.getSelectedIndex());
         stat.paramsPanelIntroductionError = params;
@@ -649,6 +653,13 @@ public class PanelIntroductionError extends JPanel implements GetData {
                     break;
                 case "comboBoxStationOrPeregonName":
                     comboBoxStationOrPeregonName.setSelectedIndex(Integer.valueOf(s[1]));
+                    break;
+                case "comboBoxStationOrPeregonName2":
+                    comboBoxStationOrPeregonName.removeAllItems();
+                    comboBoxStationOrPeregonName.addItem(s[1]);
+                    comboBoxStationOrPeregonName.setEnabled(false);
+                    comboBoxStationOrPeregon.setEnabled(false);
+                    comboBoxDist.setEnabled(false);
                     break;
                 case "comboBoxDepartment":
                     comboBoxDepartment.setSelectedIndex(Integer.valueOf(s[1]));
