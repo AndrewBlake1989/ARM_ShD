@@ -81,5 +81,4 @@ public class ListOfRecordsTableModel extends AbstractTableModel implements Table
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         // NOP
     }
-
 }

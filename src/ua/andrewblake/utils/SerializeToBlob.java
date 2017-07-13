@@ -4,6 +4,7 @@ import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
 
+import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.io.*;
 import java.sql.Blob;
@@ -20,10 +21,8 @@ public class SerializeToBlob {
             oos.flush();
             oos.close();
             fos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
         } finally {
             SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
@@ -35,12 +34,11 @@ public class SerializeToBlob {
         try (FileInputStream fis = new FileInputStream(new File("src/ua/andrewblake/save/SaveStatToBlob.svf"));
              ObjectInputStream ois = new ObjectInputStream(fis)){
             stat = (Stat) ois.readObject();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+                 e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            // NOP
         } finally {
             SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
@@ -59,15 +57,16 @@ public class SerializeToBlob {
                 targetFile.write(b);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
         } finally {
             SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
         return SerializeToBlob.deserialize();
     }
-
 }

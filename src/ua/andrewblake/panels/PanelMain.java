@@ -224,7 +224,7 @@ public class PanelMain extends JPanel {
         System.exit(0);
     }
 
-    public void drawUserData() {
+    void drawUserData() {
         String fullUserPosition;
         String shortUserPosition;
         Statement statementForMySQL = ConnectionToMySQL.getStatementForMySQL();
@@ -238,10 +238,13 @@ public class PanelMain extends JPanel {
                 labelUserStatus5OnPanelMain.setText(GlobalSettings.isUserIsAdministrator()?"Так":"Ні");
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         buttonEditErrorOnPanelMain.setEnabled(GlobalSettings.isUserIsAdministrator());
         buttonEditCatalogueOnPanelMain.setEnabled(GlobalSettings.isUserIsAdministrator());
     }
-
 }

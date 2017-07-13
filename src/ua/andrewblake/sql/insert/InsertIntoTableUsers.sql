@@ -1,2 +1,0 @@
-INSERT INTO arm_shd_database.users (access_id, name, position, administrator, deleted) VALUES ('lost77521', 'Бакало Андрій Іванович', 1, 1, 0);
-INSERT INTO arm_shd_database.users (access_id, name, position, administrator, deleted) VALUES ('lz-sh-admin', 'Адміністратор програми', 2, 1, 0);

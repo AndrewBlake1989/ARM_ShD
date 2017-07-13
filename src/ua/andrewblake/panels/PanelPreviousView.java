@@ -1,21 +1,15 @@
 package ua.andrewblake.panels;
 
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
-import ua.andrewblake.interfaces.GetData;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
 import ua.andrewblake.utils.ConnectionToMySQL;
 import ua.andrewblake.utils.SerializeToBlob;
-import ua.andrewblake.utils.SkinUtil;
 
 import javax.swing.*;
-import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
-import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.*;
 
 public class PanelPreviousView extends JPanel {
 
@@ -47,18 +41,15 @@ public class PanelPreviousView extends JPanel {
         textArea.setEditable(false);
         scrollPane.setViewportView(textArea);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 100, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
-        buttonRegister = new JButton("Зберегти");
+        buttonRegister = new JButton("Зберегти", new ImageIcon("src/ua/andrewblake/resources/Save.png"));
         this.add(buttonRegister);
         buttonRegister.setBounds(690, 530, 100, 30);
-        buttonRegister.setIcon(new ImageIcon("src/ua/andrewblake/resources/Save.png"));
         buttonRegister.addActionListener(this::buttonRegisterActionPerformed);
-
 
         this.setVisible(false);
 
@@ -66,7 +57,7 @@ public class PanelPreviousView extends JPanel {
 
     }
 
-    public void showSimpleRecord(String[] simple, String[] createAndEditUsers) {
+    void showSimpleRecord(String[] simple, String[] createAndEditUsers) {
         textArea.setText("");
         for (String s : simple) {
             textArea.append(s.concat("\n"));
@@ -107,9 +98,7 @@ public class PanelPreviousView extends JPanel {
                 tempCreateAndEditUsers = new String[1];
             } else {
                 tempCreateAndEditUsers = new String[stat.createAndEditUsers.length + 1];
-                for (int i = 0; i < stat.createAndEditUsers.length; i++) {
-                    tempCreateAndEditUsers[i] = stat.createAndEditUsers[i];
-                }
+                System.arraycopy(stat.createAndEditUsers, 0, tempCreateAndEditUsers, 0, stat.createAndEditUsers.length);
             }
             res = statement.executeQuery("select position_full, position_short from positions where id = " + GlobalSettings.getUserID() + ";");
             while (res.next()) {
@@ -132,11 +121,10 @@ public class PanelPreviousView extends JPanel {
             statement.executeQuery("UNLOCK TABLES;");
             GlobalSettings.setCurrentStat(stat);
         } catch (SQLException e) {
-            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
             return;
         } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою.");
+            JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
             return;
         } finally {
             buttonRegister.setVisible(true);

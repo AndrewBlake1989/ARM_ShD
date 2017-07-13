@@ -1,6 +1,5 @@
 package ua.andrewblake.panels;
 
-
 import ua.andrewblake.interfaces.GetData;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
@@ -36,18 +35,15 @@ public class PanelIntroductionError3 extends JPanel implements GetData {
         textAreaAdditionalData.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         scrollPaneAdditionalData.setViewportView(textAreaAdditionalData);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 100, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
-        buttonPreviousView = new JButton("Перегляд");
+        buttonPreviousView = new JButton("Перегляд", new ImageIcon("src/ua/andrewblake/resources/PreviousView.png"));
         this.add(buttonPreviousView);
         buttonPreviousView.setBounds(690, 530, 100, 30);
-        buttonPreviousView.setIcon(new ImageIcon("src/ua/andrewblake/resources/PreviousView.png"));
         buttonPreviousView.addActionListener(this::buttonNextActionPerformed);
-
 
         this.setVisible(false);
 
@@ -67,7 +63,7 @@ public class PanelIntroductionError3 extends JPanel implements GetData {
         GlobalSettings.getPanelPreviousView().showSimpleRecord(stat.simpleRecord, stat.createAndEditUsers);
     }
 
-    public void reset() {
+    void reset() {
         textAreaAdditionalData.setText("");
     }
 
@@ -83,13 +79,11 @@ public class PanelIntroductionError3 extends JPanel implements GetData {
 
     @Override
     public Stat getParams(Stat stat) {
-        stat = ((GetData) GlobalSettings.getPanelIntroductionError2()).getParams(null);
+        stat = GlobalSettings.getPanelIntroductionError2().getParams(null);
         stat.additionalData = textAreaAdditionalData.getText().trim();
         if (!stat.additionalData.equals("")) {
             String[] temp = new String[stat.simpleRecord.length + 1];
-            for (int i = 0; i < stat.simpleRecord.length; i++) {
-                temp[i] = stat.simpleRecord[i];
-            }
+            System.arraycopy(stat.simpleRecord, 0, temp, 0, stat.simpleRecord.length);
             temp[temp.length - 1] = "Додаткові дані: ".concat(textAreaAdditionalData.getText().trim()).concat(";");
             stat.simpleRecord = temp;
         }

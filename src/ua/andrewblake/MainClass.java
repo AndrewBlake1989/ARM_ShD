@@ -7,7 +7,6 @@ import java.sql.Connection;
 
 public class MainClass {
     public static void main(String[] args) {
-
         Connection connection = ConnectionToMySQL.getConnectionToMySQL();
         if (connection == null) {
             GlobalSettings.setAvailabilityConnectionWithBD(false);
@@ -17,5 +16,3 @@ public class MainClass {
         Frame.main(null);
     }
 }
-
-//todo bunch для insert data sql при встановленні даних довідників...

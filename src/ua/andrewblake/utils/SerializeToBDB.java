@@ -25,7 +25,8 @@ public class SerializeToBDB {
         } catch (FileNotFoundException e) {
             throw new AccessingFileException(null);
         } catch (IOException e) {
-            throw new CommunicateFileSystemException();
+            e.printStackTrace();
+//            throw new CommunicateFileSystemException();
         } finally {
             SkinUtil.changeSkin(GlobalSettings.getFrame(), new WindowsLookAndFeel());
         }
@@ -59,5 +60,4 @@ public class SerializeToBDB {
         }
         return bdb;
     }
-
 }

@@ -31,31 +31,6 @@ public class DateTime {
         minuteInt = Integer.parseInt(minuteString);
     }
 
-    public static String getYearString() {
-        calculateCurrentDateTime();
-        return yearString;
-    }
-
-    public static String getMonthString() {
-        calculateCurrentDateTime();
-        return monthString;
-    }
-
-    public static String getDayString() {
-        calculateCurrentDateTime();
-        return dayString;
-    }
-
-    public static String getHourString() {
-        calculateCurrentDateTime();
-        return hourString;
-    }
-
-    public static String getMinuteString() {
-        calculateCurrentDateTime();
-        return minuteString;
-    }
-
     public static int getYearInt() {
         calculateCurrentDateTime();
         return yearInt;

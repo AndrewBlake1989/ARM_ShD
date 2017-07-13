@@ -11,7 +11,9 @@ public class SkinUtil {
         try {
             UIManager.setLookAndFeel(laf);
         } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
+            // NOP
+            return;
         }
         SwingUtilities.updateComponentTreeUI(comp);
     }
@@ -19,14 +21,10 @@ public class SkinUtil {
     public static void changeSkin(Component comp, String s){
         try {
             UIManager.setLookAndFeel(s);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+//            Logger.getLogger(SkinUtil.class.getName()).log(Level.SEVERE, null, ex);
+            // NOP
+            return;
         }
         SwingUtilities.updateComponentTreeUI(comp);
     }

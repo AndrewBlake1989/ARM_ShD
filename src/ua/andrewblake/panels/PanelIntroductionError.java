@@ -3,7 +3,6 @@ package ua.andrewblake.panels;
 import ua.andrewblake.interfaces.GetData;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
-import ua.andrewblake.temporary.TestSerialization;
 import ua.andrewblake.utils.DateTime;
 import ua.andrewblake.utils.StringModels;
 
@@ -203,7 +202,6 @@ public class PanelIntroductionError extends JPanel implements GetData {
     }
 
     // Methods:
-
     void fillCurrentDateTime() {
         comboBoxBeginningYear.setSelectedIndex(DateTime.getYearInt() - 2010);
         comboBoxBeginningMonth.setSelectedIndex(DateTime.getMonthInt() - 1);
@@ -277,118 +275,120 @@ public class PanelIntroductionError extends JPanel implements GetData {
         comboBoxStationOrPeregonName.removeAllItems();
         if ((comboBoxDist.getSelectedIndex() == 0) || (comboBoxStationOrPeregon.getSelectedIndex() == 0)) { return; }
         if (comboBoxStationOrPeregon.getSelectedIndex() == 1) {
-            if (comboBoxDist.getSelectedIndex() == 1) {
-                for (int i = 0; i < StringModels.getShch1Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch1Stations()[i]);
-                }
+            switch (comboBoxDist.getSelectedIndex()) {
+                case 1:
+                    for (int i = 0; i < StringModels.getShch1Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch1Stations()[i]);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < StringModels.getShch2Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch2Stations()[i]);
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < StringModels.getShch3Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch3Stations()[i]);
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < StringModels.getShch4Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch4Stations()[i]);
+                    }
+                    break;
+                case 5:
+                    for (int i = 0; i < StringModels.getShch5Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch5Stations()[i]);
+                    }
+                    break;
+                case 6:
+                    for (int i = 0; i < StringModels.getShch6Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch6Stations()[i]);
+                    }
+                    break;
+                case 7:
+                    for (int i = 0; i < StringModels.getShch8Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch8Stations()[i]);
+                    }
+                    break;
+                case 8:
+                    for (int i = 0; i < StringModels.getShch9Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch9Stations()[i]);
+                    }
+                    break;
+                case 9:
+                    for (int i = 0; i < StringModels.getShch10Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch10Stations()[i]);
+                    }
+                    break;
+                case 10:
+                    for (int i = 0; i < StringModels.getShch11Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch11Stations()[i]);
+                    }
+                    break;
+                case 11:
+                    for (int i = 0; i < StringModels.getShch12Stations().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch12Stations()[i]);
+                    }
+                    break;
             }
-            if (comboBoxDist.getSelectedIndex() == 2) {
-                for (int i = 0; i < StringModels.getShch2Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch2Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 3) {
-                for (int i = 0; i < StringModels.getShch3Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch3Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 4) {
-                for (int i = 0; i < StringModels.getShch4Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch4Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 5) {
-                for (int i = 0; i < StringModels.getShch5Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch5Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 6) {
-                for (int i = 0; i < StringModels.getShch6Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch6Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 7) {
-                for (int i = 0; i < StringModels.getShch8Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch8Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 8) {
-                for (int i = 0; i < StringModels.getShch9Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch9Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 9) {
-                for (int i = 0; i < StringModels.getShch10Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch10Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 10) {
-                for (int i = 0; i < StringModels.getShch11Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch11Stations()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 11) {
-                for (int i = 0; i < StringModels.getShch12Stations().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch12Stations()[i]);
-                }
-            }
-        }
-        if (comboBoxStationOrPeregon.getSelectedIndex() == 2) {
-            if (comboBoxDist.getSelectedIndex() == 1) {
-                for (int i = 0; i < StringModels.getShch1Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch1Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 2) {
-                for (int i = 0; i < StringModels.getShch2Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch2Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 3) {
-                for (int i = 0; i < StringModels.getShch3Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch3Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 4) {
-                for (int i = 0; i < StringModels.getShch4Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch4Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 5) {
-                for (int i = 0; i < StringModels.getShch5Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch5Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 6) {
-                for (int i = 0; i < StringModels.getShch6Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch6Peregons()[i]);
-                }
-
-            }
-            if (comboBoxDist.getSelectedIndex() == 7) {
-                for (int i = 0; i < StringModels.getShch8Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch8Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 8) {
-                for (int i = 0; i < StringModels.getShch9Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch9Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 9) {
-                for (int i = 0; i < StringModels.getShch10Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch10Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 10) {
-                for (int i = 0; i < StringModels.getShch11Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch11Peregons()[i]);
-                }
-            }
-            if (comboBoxDist.getSelectedIndex() == 11) {
-                for (int i = 0; i < StringModels.getShch12Peregons().length; i++) {
-                    comboBoxStationOrPeregonName.addItem(StringModels.getShch12Peregons()[i]);
-                }
+        } else {
+            switch (comboBoxDist.getSelectedIndex()) {
+                case 1:
+                    for (int i = 0; i < StringModels.getShch1Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch1Peregons()[i]);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < StringModels.getShch2Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch2Peregons()[i]);
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < StringModels.getShch3Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch3Peregons()[i]);
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < StringModels.getShch4Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch4Peregons()[i]);
+                    }
+                    break;
+                case 5:
+                    for (int i = 0; i < StringModels.getShch5Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch5Peregons()[i]);
+                    }
+                    break;
+                case 6:
+                    for (int i = 0; i < StringModels.getShch6Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch6Peregons()[i]);
+                    }
+                    break;
+                case 7:
+                    for (int i = 0; i < StringModels.getShch8Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch8Peregons()[i]);
+                    }
+                    break;
+                case 8:
+                    for (int i = 0; i < StringModels.getShch9Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch9Peregons()[i]);
+                    }
+                    break;
+                case 9:
+                    for (int i = 0; i < StringModels.getShch10Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch10Peregons()[i]);
+                    }
+                    break;
+                case 10:
+                    for (int i = 0; i < StringModels.getShch11Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch11Peregons()[i]);
+                    }
+                    break;
+                case 11:
+                    for (int i = 0; i < StringModels.getShch12Peregons().length; i++) {
+                        comboBoxStationOrPeregonName.addItem(StringModels.getShch12Peregons()[i]);
+                    }
+                    break;
             }
         }
     }
@@ -487,7 +487,6 @@ public class PanelIntroductionError extends JPanel implements GetData {
                 return false;
             }
         } catch (ParseException e) {
-            e.printStackTrace();
             return false;
         }
         if (comboBoxStationOrPeregon.getSelectedIndex() == 0) {
@@ -536,7 +535,7 @@ public class PanelIntroductionError extends JPanel implements GetData {
             int minutes = allMinutes % 60;
             simple[5] = "Тривалість пошкодження: ".concat(String.valueOf(hours)).concat(":").concat((String.valueOf(minutes)).length()==1?"0".concat((String.valueOf(minutes))):(String.valueOf(minutes))).concat(";");
         } catch (ParseException e) {
-            e.printStackTrace();
+            // NOP
         }
         GetData gd = (GetData) panelTypeOfDevice;
         simple = gd.getSimple(simple);
@@ -576,8 +575,6 @@ public class PanelIntroductionError extends JPanel implements GetData {
         params[10][1] = String.valueOf(comboBoxDist.getSelectedIndex());
         params[11][0] = "comboBoxStationOrPeregon";
         params[11][1] = String.valueOf(comboBoxStationOrPeregon.getSelectedIndex());
-//        params[12][0] = "comboBoxStationOrPeregonName";
-//        params[12][1] = String.valueOf(comboBoxStationOrPeregonName.getSelectedIndex());
         params[12][0] = "comboBoxStationOrPeregonName2";
         params[12][1] = (String) comboBoxStationOrPeregonName.getSelectedItem();
         params[13][0] = "comboBoxDepartment";

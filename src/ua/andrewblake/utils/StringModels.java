@@ -6,6 +6,7 @@ import java.sql.Statement;
 
 public class StringModels {
 
+    //Variables:
     //Date & Time:
     private static String[] years = {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050"};
     private static String[] months = {"Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"};
@@ -85,7 +86,6 @@ public class StringModels {
     private static String[] shReasons2OperationalReasons = {"-", "Порушення терміну виконання робіт згідно інструкції ЦШ-0060", "Порушення технології виконання робіт згідно інструкції ЦШ-0060", "Порушення правил безпеки руху згідно інструкції ЦШ-0018", "Помилка під час виконання робіт, що не викликала порушення безпеки руху", "Неякісна перевірка і ремонт в КВП, майстернях та інш.", "Старіння, зношеність", "Гроза, стихія, перенапруга", "Причина не встановлена"};
 
     // MySQL Date:
-    private static String[] allStations;
     private static String[] shch1Stations;
     private static String[] shch2Stations;
     private static String[] shch3Stations;
@@ -97,7 +97,6 @@ public class StringModels {
     private static String[] shch10Stations;
     private static String[] shch11Stations;
     private static String[] shch12Stations;
-    private static String[] allPeregons;
     private static String[] shch1Peregons;
     private static String[] shch2Peregons;
     private static String[] shch3Peregons;
@@ -113,8 +112,7 @@ public class StringModels {
 
 
 
-    //||\\********** Methods:
-
+    //Methods:
     //Date & Time:
     public static String[] getYears() {
         return years;

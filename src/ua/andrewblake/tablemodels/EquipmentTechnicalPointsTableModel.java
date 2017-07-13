@@ -59,8 +59,11 @@ public class EquipmentTechnicalPointsTableModel extends AbstractTableModel imple
             }
             statement.executeQuery("UNLOCK TABLES;");
         } catch (SQLException e) {
-            e.printStackTrace();
-            // todo noConnection
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         this.fireTableDataChanged();
     }

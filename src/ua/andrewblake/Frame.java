@@ -6,7 +6,6 @@ import ua.andrewblake.utils.ConnectionToMySQL;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
 
 public class Frame extends JFrame {
 
@@ -28,7 +27,7 @@ public class Frame extends JFrame {
     PanelCatalogueEquipmentTechnicalPoints panelCatalogueEquipmentTechnicalPoints;
     PanelDatabaseAdministration panelDatabaseAdministration = new PanelDatabaseAdministration();
 
-    public Frame() {
+    private Frame() {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("АРМ ШД");
@@ -81,20 +80,12 @@ public class Frame extends JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            // java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            // NOP
+            return;
         }
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Frame().setVisible(true);
-            }
-        });
+        EventQueue.invokeLater(() -> new Frame().setVisible(true));
     }
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {

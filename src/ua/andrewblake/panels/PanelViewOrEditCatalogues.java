@@ -48,10 +48,9 @@ public class PanelViewOrEditCatalogues extends JPanel {
         buttonEquipmentTechnicalPoints.setBounds(630, 160, 150, 25);
         buttonEquipmentTechnicalPoints.addActionListener(this::buttonEquipmentTechnicalPointsActionPerformed);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         this.updateUI();
@@ -61,8 +60,7 @@ public class PanelViewOrEditCatalogues extends JPanel {
 
     }
 
-
-    public void viewOrEdit(boolean edit) {
+    void viewOrEdit(boolean edit) {
         this.edit = edit;
         buttonUsers.setVisible(edit);
         buttonEquipmentTechnicalPoints.setVisible(edit);
@@ -97,5 +95,4 @@ public class PanelViewOrEditCatalogues extends JPanel {
         this.setVisible(false);
         GlobalSettings.getPanelMain().setVisible(true);
     }
-
 }

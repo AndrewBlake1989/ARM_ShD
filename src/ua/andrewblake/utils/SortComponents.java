@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * Created by AndrewBlake on 02.05.2017.
- */
 public class SortComponents {
 
     public SortComponents() {
@@ -76,7 +73,6 @@ public class SortComponents {
             }
             if (component instanceof JComboBox) {
                 result = result.concat((String) ((JComboBox) component).getSelectedItem()).concat(" ");
-                continue;
             }
         }
         result = result.substring(0, result.length() - 1);

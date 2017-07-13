@@ -5,20 +5,12 @@ import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
 import ua.andrewblake.tablemodels.TableModel2_1;
 import ua.andrewblake.tablemodels.TableModel4_1;
-import ua.andrewblake.temporary.TestSerialization;
-import ua.andrewblake.utils.ConnectionToMySQL;
-import ua.andrewblake.utils.DateTime;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class PanelIntroductionError2 extends JPanel implements GetData {
 
@@ -337,16 +329,14 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
 
 
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 100, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
-        buttonNext = new JButton("Далі");
+        buttonNext = new JButton("Далі", new ImageIcon("src/ua/andrewblake/resources/Next.png"));
         this.add(buttonNext);
         buttonNext.setBounds(690, 530, 100, 30);
-        buttonNext.setIcon(new ImageIcon("src/ua/andrewblake/resources/Next.png"));
         buttonNext.addActionListener(this::buttonNextActionPerformed);
 
         this.setVisible(false);
@@ -413,10 +403,10 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
 
     private void button4_DeleteSelectedActionPerformed(java.awt.event.ActionEvent evt) {
         if (isSelectedTable4_1) {
-            tm4_1.setValueAt(new String(""), selectedRowTable4_1, 0);
-            tm4_1.setValueAt(new String(""), selectedRowTable4_1, 1);
-            tm4_1.setValueAt(new String(""), selectedRowTable4_1, 2);
-            tm4_1.setValueAt(new String(""), selectedRowTable4_1, 3);
+            tm4_1.setValueAt("", selectedRowTable4_1, 0);
+            tm4_1.setValueAt("", selectedRowTable4_1, 1);
+            tm4_1.setValueAt("", selectedRowTable4_1, 2);
+            tm4_1.setValueAt("", selectedRowTable4_1, 3);
             tm4_1.recalculationCountOfTrains();
         } else {
             JOptionPane.showMessageDialog(null, "Не обрано жодного запису");
@@ -442,14 +432,11 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
     }
 
     private void buttonNextActionPerformed(java.awt.event.ActionEvent evt) {
-
         if (!canContinue()) {
             return;
         }
-
         this.setVisible(false);
         GlobalSettings.getPanelIntroductionError3().setVisible(true);
-
     }
 
     private void checkBox1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -498,7 +485,7 @@ public class PanelIntroductionError2 extends JPanel implements GetData {
         checkBox6_3.setEnabled(checkBox6.isSelected());
     }
 
-    public void reset() {
+    void reset() {
         checkBox1.setSelected(false);
         checkBox2.setSelected(false);
         checkBox3.setSelected(false);

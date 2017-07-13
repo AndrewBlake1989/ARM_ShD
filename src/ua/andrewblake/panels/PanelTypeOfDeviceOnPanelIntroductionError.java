@@ -8,11 +8,7 @@ import ua.andrewblake.utils.StringModels;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-/**
- * Created by AndrewBlake on 17.04.2017.
- */
 public class PanelTypeOfDeviceOnPanelIntroductionError extends JPanel implements GetData {
 
     private JSeparator separator;
@@ -28,7 +24,7 @@ public class PanelTypeOfDeviceOnPanelIntroductionError extends JPanel implements
     private JTextField textFieldTypicalReasonTemp1;
     private JTextField textFieldTypicalReasonTemp2;
 
-    public PanelTypeOfDeviceOnPanelIntroductionError() {
+    PanelTypeOfDeviceOnPanelIntroductionError() {
 
         this.setSize(800, 70);
         this.setLayout(null);
@@ -925,11 +921,10 @@ public class PanelTypeOfDeviceOnPanelIntroductionError extends JPanel implements
             } else {
                 comboBoxTypicalReasonTemp2.setVisible(false);
             }
-            return;
         }
     }
 
-    public void reset() {
+    void reset() {
         comboBoxTypeOfDevice.setSelectedIndex(0);
     }
 
@@ -1101,16 +1096,13 @@ public class PanelTypeOfDeviceOnPanelIntroductionError extends JPanel implements
     @Override
     public String[] getSimple(String[] simple) {
         String[] mySimple = new String[8];
-        for (int i = 0; i < 6; i++) {
-            mySimple[i] = simple[i];
-        }
+        System.arraycopy(simple, 0, mySimple, 0, 6);
         mySimple[6] = "Тип пристрою: ".concat((String) comboBoxTypeOfDevice.getSelectedItem()).concat(";");
         if ((comboBoxTypeOfDevice.getSelectedIndex() != 8) && (comboBoxTypeOfDevice.getSelectedIndex() != 9) && (comboBoxTypeOfDevice.getSelectedIndex() != 10) && (comboBoxTypeOfDevice.getSelectedIndex() != 11)) {
             mySimple[7] = "Характерна причина: ".concat((String) comboBoxTypicalReason.getSelectedItem()).concat(";");
         } else {
             mySimple[7] = "";
         }
-
         ArrayList<Component> components = new ArrayList<>();
         if (labelTypicalReasonTemp1.isVisible()) {components.add(labelTypicalReasonTemp1);}
         if (labelTypicalReasonTemp2.isVisible()) {components.add(labelTypicalReasonTemp2);}
@@ -1127,9 +1119,7 @@ public class PanelTypeOfDeviceOnPanelIntroductionError extends JPanel implements
             tmp = 7;
         }
         String[] tempS = new String[tmp + 1];
-        for (int i = 0; i < tmp; i++) {
-            tempS[i] = mySimple[i];
-        }
+        System.arraycopy(mySimple, 0, tempS, 0, tmp);
         mySimple = tempS;
         mySimple[tmp] = (SortComponents.sortAndWrite(components)).concat(";");
         return mySimple;

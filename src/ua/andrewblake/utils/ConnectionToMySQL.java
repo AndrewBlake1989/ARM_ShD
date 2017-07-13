@@ -3,6 +3,7 @@ package ua.andrewblake.utils;
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
 import ua.andrewblake.settings.ConnectionSettings;
 
+import javax.swing.*;
 import java.sql.*;
 
 public class ConnectionToMySQL {
@@ -34,6 +35,15 @@ public class ConnectionToMySQL {
                 connectionToMySQL = DriverManager.getConnection(stringBuilder.toString(), connectionSettings.username, connectionSettings.password);
             } catch (SQLException e) {
                 e.printStackTrace();
+                if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                }
+                switch (e.getErrorCode()) {
+                    case 1044:
+                        JOptionPane.showMessageDialog(null, "Доступ до Бази Даних для даного комп'ютера заборонений. Зверніться до вашого Адміністратора");
+                        break;
+                }
+                System.out.println(e.getErrorCode());
             }
         }
         return connectionToMySQL;

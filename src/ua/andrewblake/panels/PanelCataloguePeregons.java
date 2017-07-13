@@ -162,10 +162,9 @@ public class PanelCataloguePeregons extends JPanel {
         buttonRepair.addActionListener(this::buttonRepairActionPerformed);
         buttonRepair.setVisible(true);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         this.updateUI();
@@ -221,9 +220,11 @@ public class PanelCataloguePeregons extends JPanel {
             query = "UNLOCK TABLES;";
             statement.executeQuery(query);
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getErrorCode());
-
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         buttonAdd.setVisible(edit);
         buttonDelete.setVisible(edit);
@@ -300,7 +301,6 @@ public class PanelCataloguePeregons extends JPanel {
             buttonEdit.setVisible(false);
             checkBoxShowDeleted.setVisible(false);
         }
-
     }
 
     private void buttonEditActionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,7 +349,11 @@ public class PanelCataloguePeregons extends JPanel {
                 preparedStatement.execute("UNLOCK TABLES;");
                 StringModels.resetPeregons();
             } catch (SQLException e) {
-                e.printStackTrace();
+                if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                } else {
+                    JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                }
             } finally {
                 buttonOk.setVisible(true);
             }
@@ -368,7 +372,11 @@ public class PanelCataloguePeregons extends JPanel {
                 preparedStatement.execute("UNLOCK TABLES;");
                 StringModels.resetPeregons();
             } catch (SQLException e) {
-                e.printStackTrace();
+                if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                } else {
+                    JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                }
             } finally {
                 buttonOk.setVisible(true);
             }
@@ -398,7 +406,11 @@ public class PanelCataloguePeregons extends JPanel {
             preparedStatement.execute("UNLOCK TABLES;");
             StringModels.resetPeregons();
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } finally {
             buttonDelete.setVisible(true);
         }
@@ -417,7 +429,11 @@ public class PanelCataloguePeregons extends JPanel {
             preparedStatement.execute("UNLOCK TABLES;");
             StringModels.resetPeregons();
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } finally {
             buttonRepair.setVisible(true);
         }

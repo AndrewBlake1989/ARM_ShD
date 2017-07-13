@@ -608,8 +608,6 @@ class PanelObjectsAndReasonsByDepartmentSh extends JPanel implements GetData {
         textFieldReason2_additionally_1.setVisible(false);
         textFieldReason2_additionally_1.setName("textFieldReason2_additionally_1");
 
-
-
         this.setVisible(true);
 
     }
@@ -1592,7 +1590,6 @@ class PanelObjectsAndReasonsByDepartmentSh extends JPanel implements GetData {
         textFieldElement_additionally_4.setVisible(false);
         textFieldElement_additionally_5.setText("");
         textFieldElement_additionally_5.setVisible(false);
-
 
         switch (comboBoxShObjects.getSelectedIndex()) {
             case 2: // Шафи, стативи, коробки, яшики
@@ -4081,7 +4078,7 @@ class PanelObjectsAndReasonsByDepartmentSh extends JPanel implements GetData {
         comboList.add(comboBoxReason1_additionally_3);
         comboList.add(comboBoxReason2_additionally_1);
         comboList.add(comboBoxMonthControlKVP);
-        for (JComboBox<String> jcs : comboList) {
+        for (JComboBox jcs : comboList) {
             if ((jcs.isVisible()) && (jcs.getItemCount() > 0) && (jcs.getSelectedItem().equals("-"))) {
                 JOptionPane.showMessageDialog(null, "Не уточнено всі дані випадаючих списків");
                 return false;
@@ -4363,7 +4360,6 @@ class PanelObjectsAndReasonsByDepartmentSh extends JPanel implements GetData {
                 return false;
             }
         }
-        // todo RK
         if (comboBoxShObjects.getSelectedIndex() == 8) { // Кабельні лінії
             int iYear;
             try {

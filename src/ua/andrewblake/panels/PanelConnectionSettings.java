@@ -109,7 +109,6 @@ public class PanelConnectionSettings extends JPanel {
         passwordFieldPassword.setText(connectionSettings.password);
     }
 
-//    @SuppressWarnings("all")
     private void buttonConnectSettingsActionPerformed(java.awt.event.ActionEvent evt) {
         buttonSave.setVisible(false);
         ConnectionSettings connectionSettings = new ConnectionSettings();
@@ -131,6 +130,7 @@ public class PanelConnectionSettings extends JPanel {
         connectionSettings.username = textFieldUserName.getText();
         connectionSettings.password = passwordFieldPassword.getText();
         SerializeConnectionSettings.serialize(connectionSettings);
+        GlobalSettings.getFrame().setVisible(false);
         MainClass.main(null);
     }
 }

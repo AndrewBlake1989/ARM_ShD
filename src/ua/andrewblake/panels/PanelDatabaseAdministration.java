@@ -3,13 +3,14 @@ package ua.andrewblake.panels;
 import ua.andrewblake.exceptions.AccessingFileException;
 import ua.andrewblake.exceptions.CommunicateFileSystemException;
 import ua.andrewblake.exceptions.FailureLoadDataFromDatabaseException;
-import ua.andrewblake.save.BackupDataBase;
 import ua.andrewblake.settings.GlobalSettings;
-import ua.andrewblake.utils.*;
+import ua.andrewblake.utils.CreateBDB;
+import ua.andrewblake.utils.FileFilterForBackupDataBase;
+import ua.andrewblake.utils.RestoreDB;
+import ua.andrewblake.utils.SerializeToBDB;
 
 import javax.swing.*;
 import java.io.File;
-import java.io.Serializable;
 
 public class PanelDatabaseAdministration extends JPanel {
 
@@ -71,15 +72,19 @@ public class PanelDatabaseAdministration extends JPanel {
         } catch (AccessingFileException e) {
             if (e.getFileName() == null) {
                 JOptionPane.showMessageDialog(null, "Збій зв'язку з файлом резервної копії");
+                return;
             } else {
                 if (e.getFileName().equals("Stat")) {
                     JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
+                    return;
                 }
             }
         } catch (CommunicateFileSystemException e) {
             JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
+            return;
         } catch (FailureLoadDataFromDatabaseException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Невідомий збій");
+            return;
         }
         JOptionPane.showMessageDialog(null, "База Даних успішно відновлена");
         buttonCreate.setVisible(true);
@@ -104,10 +109,14 @@ public class PanelDatabaseAdministration extends JPanel {
             SerializeToBDB.serialize(CreateBDB.create(), file);
         } catch (FailureLoadDataFromDatabaseException e) {
             JOptionPane.showMessageDialog(null, "Збій завантаження інформації з Бази Даних");
+            return;
         } catch (CommunicateFileSystemException e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
+            return;
         } catch (AccessingFileException e) {
             JOptionPane.showMessageDialog(null, "Збій зв'язку з файлом резервної копії");
+            return;
         }
         JOptionPane.showMessageDialog(null, "Файл резервної копії Бази Даних успішно створений");
         buttonCreate.setVisible(true);
@@ -115,8 +124,6 @@ public class PanelDatabaseAdministration extends JPanel {
         buttonBack.setVisible(true);
         this.updateUI();
     }
-
-
 
     private void buttonBackActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);

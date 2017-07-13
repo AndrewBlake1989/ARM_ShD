@@ -2,7 +2,6 @@ package ua.andrewblake.panels;
 
 import ua.andrewblake.settings.GlobalSettings;
 import ua.andrewblake.tablemodels.EquipmentTechnicalPointsTableModel;
-import ua.andrewblake.tablemodels.ListOfRecordsTableModel;
 import ua.andrewblake.utils.ConnectionToMySQL;
 import ua.andrewblake.utils.DateTime;
 import ua.andrewblake.utils.StringModels;
@@ -42,7 +41,7 @@ public class PanelCatalogueEquipmentTechnicalPoints extends JPanel {
         labelImage.setBounds(60, 30, 680, 280);
         labelImage.setHorizontalAlignment(SwingConstants.LEFT);
 
-        comboBoxYear = new JComboBox<>(StringModels.getYears()); // comboBoxYear must be before table (NullPointerException)
+        comboBoxYear = new JComboBox<>(StringModels.getYears());
         this.add(comboBoxYear);
         comboBoxYear.setBounds(380, 535, 60, 20);
         comboBoxYear.setSelectedIndex(DateTime.getYearInt() - 2010);
@@ -107,10 +106,9 @@ public class PanelCatalogueEquipmentTechnicalPoints extends JPanel {
             }
         });
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         labelYear = new JLabel("Рік:");
@@ -172,8 +170,11 @@ public class PanelCatalogueEquipmentTechnicalPoints extends JPanel {
             statement.executeQuery("UNLOCK TABLES;");
             JOptionPane.showMessageDialog(null, "Успішно збережено.");
         } catch (SQLException e) {
-            e.printStackTrace();
-            // todo noConnection
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } finally {
             buttonSave.setVisible(true);
         }

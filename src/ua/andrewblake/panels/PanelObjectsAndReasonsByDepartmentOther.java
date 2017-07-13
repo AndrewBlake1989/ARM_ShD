@@ -260,8 +260,7 @@ class PanelObjectsAndReasonsByDepartmentOther extends JPanel implements GetData 
 
     @Override
     public Stat getParams(Stat stat) {
-        String[][] params = new String[][]{{"comboBox1", String.valueOf(comboBox1.getSelectedIndex())}, {"textField", textField.getText()}};
-        stat.paramsPanelObjectsAndReasons = params;
+        stat.paramsPanelObjectsAndReasons = new String[][]{{"comboBox1", String.valueOf(comboBox1.getSelectedIndex())}, {"textField", textField.getText()}};
         stat.theftTableModel = theftTableModel;
         stat.theftResultTableModel = theftResultTableModel;
         return stat;

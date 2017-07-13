@@ -5,13 +5,13 @@ import ua.andrewblake.exceptions.CommunicateFileSystemException;
 import ua.andrewblake.exceptions.FailedToCreateReportException;
 import ua.andrewblake.exceptions.FailureLoadDataFromDatabaseException;
 import ua.andrewblake.settings.GlobalSettings;
-import ua.andrewblake.utils.*;
+import ua.andrewblake.utils.DateTime;
+import ua.andrewblake.utils.FileFilterForSaveReportFileChooser;
+import ua.andrewblake.utils.ReportGenerator;
+import ua.andrewblake.utils.StringModels;
 
 import javax.swing.*;
 import java.io.File;
-import java.io.IOException;
-import java.sql.*;
-import java.util.ArrayList;
 
 public class PanelReportGenerating extends JPanel {
 
@@ -123,16 +123,14 @@ public class PanelReportGenerating extends JPanel {
         this.add(labelImage);
         labelImage.setBounds(60, 90, 670, 430);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
-        buttonCreateReport = new JButton("Створити");
+        buttonCreateReport = new JButton("Створити", new ImageIcon("src/ua/andrewblake/resources/Edit.png"));
         this.add(buttonCreateReport);
         buttonCreateReport.setBounds(660, 530, 120, 30);
-        buttonCreateReport.setIcon(new ImageIcon("src/ua/andrewblake/resources/Edit.png"));
         buttonCreateReport.addActionListener(this::buttonCreateReportActionPerformed);
 
         fileChooser = new JFileChooser();
@@ -140,7 +138,6 @@ public class PanelReportGenerating extends JPanel {
         fileChooser.setAcceptAllFileFilterUsed(false);
         fileChooser.setMultiSelectionEnabled(false);
         fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
 
         this.updateUI();
         this.setVisible(false);

@@ -16,43 +16,12 @@ public class RestoreDB {
     public static void restoreDB(BackupDataBase bdb) throws FailureLoadDataFromDatabaseException, AccessingFileException {
         connection = ConnectionToMySQL.getConnectionToMySQL();
         RestoreDB.bdb = bdb;
-//        restoreShCh();
-//        restorePositions();
         restoreUsers();
         restoreEquipmentTechnicalPoints();
         restorePeregons();
         restoreStations();
         restoreRecords();
 
-    }
-
-    private static void restoreShCh() throws FailureLoadDataFromDatabaseException {
-        try {
-            for (int row = 0; row < bdb.shch.length; row++) {
-                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO shch (id, name, code, deleted) values (?, ?, ?, ?);");
-                preparedStatement.setString(1, bdb.shch[row][0]);
-                preparedStatement.setString(2, bdb.shch[row][1]);
-                preparedStatement.setString(3, bdb.shch[row][2]);
-                preparedStatement.setString(4, bdb.shch[row][3]);
-                preparedStatement.execute();
-            }
-        } catch (SQLException e) {
-            throw new FailureLoadDataFromDatabaseException(0);
-        }
-    }
-
-    private static void restorePositions() throws FailureLoadDataFromDatabaseException {
-        try {
-            for (int row = 0; row < bdb.positions.length; row++) {
-                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO positions (id, position_full, position_short) values (?, ?, ?);");
-                preparedStatement.setString(1, bdb.positions[row][0]);
-                preparedStatement.setString(2, bdb.positions[row][1]);
-                preparedStatement.setString(3, bdb.positions[row][2]);
-                preparedStatement.execute();
-            }
-        } catch (SQLException e) {
-            throw new FailureLoadDataFromDatabaseException(0);
-        }
     }
 
     private static void restoreUsers() throws FailureLoadDataFromDatabaseException {
@@ -147,6 +116,4 @@ public class RestoreDB {
             throw new AccessingFileException("Stat");
         }
     }
-
-
 }

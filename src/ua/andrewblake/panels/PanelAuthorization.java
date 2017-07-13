@@ -10,9 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * Created by AndrewBlake on 17.04.2017.
- */
 public class PanelAuthorization extends JPanel {
 
     private JFrame frame;
@@ -24,18 +21,17 @@ public class PanelAuthorization extends JPanel {
     private Statement statementForMySQL;
 
     public PanelAuthorization() {
+
         this.setSize(400, 400);
         this.setLayout(null);
 
-        imageAccess = new JLabel();
+        imageAccess = new JLabel(new ImageIcon("src/ua/andrewblake/resources/AccessImage_1.jpg"));
         this.add(imageAccess);
         imageAccess.setBounds(70, 0, 258, 252);
-        imageAccess.setIcon(new ImageIcon("src/ua/andrewblake/resources/AccessImage_1.jpg"));
 
-        labelAuthorization = new JLabel();
+        labelAuthorization = new JLabel("Для роботи з програмою введіть свій ідентифікатор доступу:");
         this.add(labelAuthorization);
         labelAuthorization.setBounds(40, 260, 315, 15);
-        labelAuthorization.setText("Для роботи з програмою введіть свій ідентифікатор доступу:");
 
         passwordFieldAuthorization = new JPasswordField();
         this.add(passwordFieldAuthorization);
@@ -44,15 +40,10 @@ public class PanelAuthorization extends JPanel {
             public void keyPressed(KeyEvent evt) {passwordFieldAuthorizationKeyPressed(evt);}
         });
 
-        buttonAuthorization = new JButton();
+        buttonAuthorization = new JButton("Увійти");
         this.add(buttonAuthorization);
         buttonAuthorization.setBounds(160, 305, 80, 25);
-        buttonAuthorization.setText("Увійти");
-        buttonAuthorization.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAuthorizationActionPerformed(evt);
-            }
-        });
+        buttonAuthorization.addActionListener(this::buttonAuthorizationActionPerformed);
 
         this.setVisible(false);
 
@@ -112,8 +103,11 @@ public class PanelAuthorization extends JPanel {
                 return;
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
     }
-
 }

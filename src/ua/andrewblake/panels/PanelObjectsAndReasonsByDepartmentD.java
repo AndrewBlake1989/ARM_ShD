@@ -4,7 +4,6 @@ import ua.andrewblake.interfaces.GetData;
 import ua.andrewblake.save.Stat;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 

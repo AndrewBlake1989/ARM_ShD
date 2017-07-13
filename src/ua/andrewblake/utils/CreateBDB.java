@@ -155,5 +155,4 @@ public class CreateBDB {
             throw new FailureLoadDataFromDatabaseException(0);
         }
     }
-
 }

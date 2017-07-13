@@ -28,10 +28,9 @@ public class PanelViewRecord extends JPanel{
         textArea.setEditable(false);
         scrollPane.setViewportView(textArea);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 100, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         this.setVisible(false);
@@ -40,7 +39,7 @@ public class PanelViewRecord extends JPanel{
 
     }
 
-    public void showSimpleRecord(String[] simple, String[] createAndEditUsers) {
+    void showSimpleRecord(String[] simple, String[] createAndEditUsers) {
         textArea.setText("");
         for (String s : simple) {
             textArea.append(s.concat("\n"));

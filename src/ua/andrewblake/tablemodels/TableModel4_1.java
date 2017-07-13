@@ -6,9 +6,6 @@ import javax.swing.table.TableModel;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by AndrewBlake on 01.05.2017.
- */
 public class TableModel4_1 extends AbstractTableModel implements TableModel, Serializable {
 
     private String[][] trainLatency;
@@ -77,7 +74,6 @@ public class TableModel4_1 extends AbstractTableModel implements TableModel, Ser
         } else {
             return "   ".concat(trainLatency[rowIndex][columnIndex]);
         }
-
     }
 
     @Override
@@ -102,9 +98,7 @@ public class TableModel4_1 extends AbstractTableModel implements TableModel, Ser
                 trainLatency[i][3] = "";
             }
         }
-
         countOfTrains = tempArray.size();
-
         this.fireTableDataChanged();
     }
 }

@@ -39,11 +39,11 @@ public class ReportGenerator {
     private static int[][] table3_2;
     private static int[][] table3_3;
     private static int[][] table3_4;
+    private static int[][] table3_5;
     private static int[][] table3_6;
     private static int[][] table3_7;
     private static int[][] table3_8;
     private static int[][] table3_9;
-    private static int[][] table3_9a;
     private static int[][] table3_10;
     private static int[][] table3_11;
     private static int[][] table3_12;
@@ -64,11 +64,11 @@ public class ReportGenerator {
         writeTable3_2();
         writeTable3_3();
         writeTable3_4();
+        writeTable3_5();
         writeTable3_6();
         writeTable3_7();
         writeTable3_8();
         writeTable3_9();
-        writeTable3_9a();
         writeTable3_10();
         writeTable3_11();
         writeTable3_12();
@@ -82,9 +82,6 @@ public class ReportGenerator {
         writeTable5_3();
         writeTable5_4();
         writeTable5_5();
-
-
-
     }
 
     private static void takeRecords(String periodOfTime, String previousYearPeriodOfTime) throws FailureLoadDataFromDatabaseException {
@@ -265,16 +262,16 @@ public class ReportGenerator {
         fillTablesZeroValues(table3_3);
         table3_4 = new int[30][10];
         fillTablesZeroValues(table3_4);
-        table3_6 = new int[16][9];
+        table3_5 = new int[16][9];
+        fillTablesZeroValues(table3_5);
+        table3_6 = new int[14][8];
         fillTablesZeroValues(table3_6);
-        table3_7 = new int[14][8];
+        table3_7 = new int[12][8];
         fillTablesZeroValues(table3_7);
-        table3_8 = new int[12][8];
+        table3_8 = new int[22][13];
         fillTablesZeroValues(table3_8);
-        table3_9 = new int[22][13];
+        table3_9 = new int[23][10];
         fillTablesZeroValues(table3_9);
-        table3_9a = new int[23][10];
-        fillTablesZeroValues(table3_9a);
         table3_10 = new int[29][11];
         fillTablesZeroValues(table3_10);
         table3_11 = new int[18][4];
@@ -1247,7 +1244,7 @@ public class ReportGenerator {
         calculateTotal(table3_4, 4, 29, 1, 9);
     }
 
-    private static void calculateStatisticTable3_6() {
+    private static void calculateStatisticTable3_5() {
         for (Stat stat : thisYearStats) {
             Department department = Other;
             for (String[] s : stat.paramsPanelIntroductionError) {
@@ -1347,12 +1344,12 @@ public class ReportGenerator {
                     break;
                 }
             }
-            table3_6[row][column]++;
+            table3_5[row][column]++;
         }
-        calculateTotal(table3_6, 4, 15, 1, 8);
+        calculateTotal(table3_5, 4, 15, 1, 8);
     }
 
-    private static void calculateStatisticTable3_7() {
+    private static void calculateStatisticTable3_6() {
         for (Stat stat : thisYearStats) {
             Department department = Other;
             for (String[] s : stat.paramsPanelIntroductionError) {
@@ -1387,12 +1384,12 @@ public class ReportGenerator {
                     break;
                 }
             }
-            table3_7[row][column]++;
+            table3_6[row][column]++;
         }
-        calculateTotal(table3_7, 4, 13, 1, 7);
+        calculateTotal(table3_6, 4, 13, 1, 7);
     }
 
-    private static void calculateStatisticTable3_8() {
+    private static void calculateStatisticTable3_7() {
         for (Stat stat : thisYearStats) {
             Department department = Other;
             for (String[] s : stat.paramsPanelIntroductionError) {
@@ -1430,19 +1427,19 @@ public class ReportGenerator {
                                         if (s2[0].equals("comboBoxReason1")) {
                                             switch (s2[1]) {
                                                 case "5": // Перегорання ламп
-                                                    table3_8[4][column]++;
+                                                    table3_7[4][column]++;
                                                     for (String[] s3 : stat.paramsPanelObjectsAndReasons) {
                                                         if (s3[0].equals("comboBoxReason1_additionally_2")) {
-                                                            table3_8[5 + Integer.valueOf(s3[1])][column]++;
+                                                            table3_7[5 + Integer.valueOf(s3[1])][column]++;
                                                             break;
                                                         }
                                                     }
                                                     break;
                                                 case "1": // Втрата контакту в лампотримачі
-                                                    table3_8[8][column]++;
+                                                    table3_7[8][column]++;
                                                     break;
                                                 case "6": // Падіння світлофора - корозія
-                                                    table3_8[9][column]++;
+                                                    table3_7[9][column]++;
                                                     break;
                                             }
                                             break;
@@ -1457,10 +1454,10 @@ public class ReportGenerator {
                 }
             }
         }
-        calculateTotal(table3_8, 4, 10, 1, 7);
+        calculateTotal(table3_7, 4, 10, 1, 7);
     }
 
-    private static void calculateStatisticTable3_9() {
+    private static void calculateStatisticTable3_8() {
         for (Stat stat : thisYearStats) {
             Department department = Other;
             for (String[] s : stat.paramsPanelIntroductionError) {
@@ -1540,21 +1537,21 @@ public class ReportGenerator {
                             if (s1[0].equals("comboBoxElement")) {
                                 switch (s1[1]) {
                                     case "1": // Автоперемикач
-                                        table3_9[3][column]++;
+                                        table3_8[3][column]++;
                                         for (String[] s2 : stat.paramsPanelObjectsAndReasons) {
                                             if (s2[0].equals("comboBoxReason1")) {
                                                 switch (s2[1]) {
                                                     case "2": // Недостатнє врубування ножів
-                                                        table3_9[4][column]++;
+                                                        table3_8[4][column]++;
                                                         break;
                                                     case "4": // Механічне пошкодження
-                                                        table3_9[5][column]++;
+                                                        table3_8[5][column]++;
                                                         break;
                                                     case "5": // Забруднення контактів
-                                                        table3_9[7][column]++;
+                                                        table3_8[7][column]++;
                                                         break;
                                                     case "6": // Обледеніння
-                                                        table3_9[8][column]++;
+                                                        table3_8[8][column]++;
                                                         break;
                                                 }
                                                 break;
@@ -1562,36 +1559,36 @@ public class ReportGenerator {
                                         }
                                         break;
                                     case "2": // Заклинювання шибера
-                                        table3_9[9][column]++;
+                                        table3_8[9][column]++;
                                         break;
                                     case "3": // Несправність механічної передачі
-                                        table3_9[10][column]++;
+                                        table3_8[10][column]++;
                                         break;
                                     case "4": // Блок-контакти
-                                        table3_9[11][column]++;
+                                        table3_8[11][column]++;
                                         break;
                                     case "5": // Монтаж
-                                        table3_9[12][column]++;
+                                        table3_8[12][column]++;
                                         break;
                                     case "6": // Несправність електродвигуна
-                                        table3_9[13][column]++;
+                                        table3_8[13][column]++;
                                         break;
                                     case "7": // Замок Мелентьєва
-                                        table3_9[14][column]++;
+                                        table3_8[14][column]++;
                                         for (String[] s2 : stat.paramsPanelObjectsAndReasons) {
                                             if (s2[0].equals("comboBoxElement_additionally_1")) {
                                                 switch (s2[1]) {
                                                     case "0": // Пружина
-                                                        table3_9[15][column]++;
+                                                        table3_8[15][column]++;
                                                         break;
                                                     case "1": // Цугальта
-                                                        table3_9[16][column]++;
+                                                        table3_8[16][column]++;
                                                         break;
                                                     case "2": // Штифт
-                                                        table3_9[17][column]++;
+                                                        table3_8[17][column]++;
                                                         break;
                                                     case "3": // Т-подібний болт
-                                                        table3_9[18][column]++;
+                                                        table3_8[18][column]++;
                                                         break;
                                                 }
                                                 break;
@@ -1599,10 +1596,10 @@ public class ReportGenerator {
                                         }
                                         break;
                                     case "8": // Курбельна заслінка
-                                        table3_9[19][column]++;
+                                        table3_8[19][column]++;
                                         break;
                                     case "9": // Інший елемент
-                                        table3_9[20][column]++;
+                                        table3_8[20][column]++;
                                         break;
                                 }
                                 break;
@@ -1614,21 +1611,21 @@ public class ReportGenerator {
             }
         }
         for (int column = 1; column <= 11; column++) {
-            table3_9[21][column] += table3_9[3][column];
+            table3_8[21][column] += table3_8[3][column];
             for (int row = 9; row <= 14; row++) {
-                table3_9[21][column] += table3_9[row][column];
+                table3_8[21][column] += table3_8[row][column];
             }
-            table3_9[21][column] += table3_9[19][column];
-            table3_9[21][column] += table3_9[20][column];
+            table3_8[21][column] += table3_8[19][column];
+            table3_8[21][column] += table3_8[20][column];
         }
         for (int row = 3; row <= 21; row++) {
             for (int column = 1; column <= 11; column++) {
-                table3_9[row][12] += table3_9[row][column];
+                table3_8[row][12] += table3_8[row][column];
             }
         }
     }
 
-    private static void calculateStatisticTable3_9a() {
+    private static void calculateStatisticTable3_9() {
         for (Stat stat : thisYearStats) {
             Department department = Other;
             for (String[] s : stat.paramsPanelIntroductionError) {
@@ -1801,9 +1798,9 @@ public class ReportGenerator {
                     break;
                 }
             }
-            table3_9a[row][column]++;
+            table3_9[row][column]++;
         }
-        calculateTotal(table3_9a, 4, 22, 1, 9);
+        calculateTotal(table3_9, 4, 22, 1, 9);
     }
 
     private static void calculateStatisticTable3_10() {
@@ -2670,11 +2667,19 @@ public class ReportGenerator {
         writeWorkbook("Table_3.4", workbook);
     }
 
+    private static void writeTable3_5() throws AccessingFileException, CommunicateFileSystemException {
+        calculateStatisticTable3_5();
+        copyPreparedTables("Table_3.5");
+        Workbook workbook = getWorkbook("Table_3.5");
+        simpleSheetWrite(workbook, table3_5, 4, 15, 1, 8);
+        writeWorkbook("Table_3.5", workbook);
+    }
+
     private static void writeTable3_6() throws AccessingFileException, CommunicateFileSystemException {
         calculateStatisticTable3_6();
         copyPreparedTables("Table_3.6");
         Workbook workbook = getWorkbook("Table_3.6");
-        simpleSheetWrite(workbook, table3_6, 4, 15, 1, 8);
+        simpleSheetWrite(workbook, table3_6, 4, 13, 1, 7);
         writeWorkbook("Table_3.6", workbook);
     }
 
@@ -2682,7 +2687,7 @@ public class ReportGenerator {
         calculateStatisticTable3_7();
         copyPreparedTables("Table_3.7");
         Workbook workbook = getWorkbook("Table_3.7");
-        simpleSheetWrite(workbook, table3_7, 4, 13, 1, 7);
+        simpleSheetWrite(workbook, table3_7, 4, 10, 1, 7);
         writeWorkbook("Table_3.7", workbook);
     }
 
@@ -2690,7 +2695,7 @@ public class ReportGenerator {
         calculateStatisticTable3_8();
         copyPreparedTables("Table_3.8");
         Workbook workbook = getWorkbook("Table_3.8");
-        simpleSheetWrite(workbook, table3_8, 4, 10, 1, 7);
+        simpleSheetWrite(workbook, table3_8, 3, 21, 1, 12);
         writeWorkbook("Table_3.8", workbook);
     }
 
@@ -2698,16 +2703,8 @@ public class ReportGenerator {
         calculateStatisticTable3_9();
         copyPreparedTables("Table_3.9");
         Workbook workbook = getWorkbook("Table_3.9");
-        simpleSheetWrite(workbook, table3_9, 3, 21, 1, 12);
+        simpleSheetWrite(workbook, table3_9, 4, 22, 2, 9);
         writeWorkbook("Table_3.9", workbook);
-    }
-
-    private static void writeTable3_9a() throws AccessingFileException, CommunicateFileSystemException {
-        calculateStatisticTable3_9a();
-        copyPreparedTables("Table_3.9a");
-        Workbook workbook = getWorkbook("Table_3.9a");
-        simpleSheetWrite(workbook, table3_9a, 4, 22, 2, 9);
-        writeWorkbook("Table_3.9a", workbook);
     }
 
     private static void writeTable3_10() throws AccessingFileException, CommunicateFileSystemException {
@@ -2829,6 +2826,4 @@ public class ReportGenerator {
             }
         }
     }
-
-
 }

@@ -17,5 +17,4 @@ public class FileFilterForBackupDataBase extends javax.swing.filechooser.FileFil
     public String getDescription() {
         return "Резрвні копії Бази Даних (*.bdb)";
     }
-
 }

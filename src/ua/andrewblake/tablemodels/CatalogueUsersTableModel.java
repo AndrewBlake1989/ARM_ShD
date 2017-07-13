@@ -64,5 +64,4 @@ public class CatalogueUsersTableModel extends AbstractTableModel implements Tabl
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         // NOP
     }
-
 }

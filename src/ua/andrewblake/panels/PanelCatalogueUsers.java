@@ -137,25 +137,28 @@ public class PanelCatalogueUsers extends JPanel {
         labelPosition = new JLabel("Посада:");
         panelNewOrEditUser.add(labelPosition);
         labelPosition.setBounds(290, 23, 45, 15);
-
-        String[] positions = {"-"};
-        try {
-            Connection connection = ConnectionToMySQL.getConnectionToMySQL();
-            Statement statement = connection.createStatement();
-            statement.executeQuery("LOCK TABLE positions READ;");
-            ResultSet resultSet = statement.executeQuery("SELECT position_short FROM positions WHERE id > 1 ORDER BY id");
-            ArrayList<String> positionsList = new ArrayList<>();
-            while (resultSet.next()) {
-                positionsList.add(resultSet.getString(1));
+            String[] positions = {"-"};
+            try {
+                Connection connection = ConnectionToMySQL.getConnectionToMySQL();
+                Statement statement = connection.createStatement();
+                statement.executeQuery("LOCK TABLE positions READ;");
+                ResultSet resultSet = statement.executeQuery("SELECT position_short FROM positions WHERE id > 1 ORDER BY id");
+                ArrayList<String> positionsList = new ArrayList<>();
+                while (resultSet.next()) {
+                    positionsList.add(resultSet.getString(1));
+                }
+                positions = new String[positionsList.size()];
+                for (int i = 0; i < positions.length; i++) {
+                    positions[i] = positionsList.get(i);
+                }
+                statement.executeQuery("UNLOCK TABLES;");
+            } catch (SQLException e) {
+                if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                } else {
+                    JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                }
             }
-            positions = new String[positionsList.size()];
-            for (int i = 0; i < positions.length; i++) {
-                positions[i] = positionsList.get(i);
-            }
-            statement.executeQuery("UNLOCK TABLES;");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
         comboBoxPosition = new JComboBox<>(positions);
         panelNewOrEditUser.add(comboBoxPosition);
         comboBoxPosition.setBounds(340, 20, 70, 20);
@@ -182,10 +185,9 @@ public class PanelCatalogueUsers extends JPanel {
         buttonCancel.setBounds(340, 80, 80, 25);
         buttonCancel.addActionListener(this::buttonCancelActionPerformed);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         this.updateUI();
@@ -227,7 +229,11 @@ public class PanelCatalogueUsers extends JPanel {
             this.updateUI();
             statement.executeQuery("UNLOCK TABLES;");
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         textFieldSelectedUser.setText("");
         login = null;
@@ -346,7 +352,11 @@ public class PanelCatalogueUsers extends JPanel {
             preparedStatement.executeUpdate();
             preparedStatement.execute("UNLOCK TABLES;");
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } finally {
             buttonDelete.setVisible(true);
         }
@@ -407,7 +417,11 @@ public class PanelCatalogueUsers extends JPanel {
             }
             preparedStatement.execute("UNLOCK TABLES;");
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         } finally {
             buttonOk.setVisible(true);
         }
@@ -431,6 +445,5 @@ public class PanelCatalogueUsers extends JPanel {
         this.setVisible(false);
         GlobalSettings.getPanelViewOrEditCatalogues().setVisible(true);
     }
-
 
 }

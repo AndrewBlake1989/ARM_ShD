@@ -6,6 +6,10 @@ import java.io.*;
 
 public class SerializeToVRS {
 
+    public static void main(String[] args) {
+        serialize(new Version("0.7", 9, "2017-07-13"));
+    }
+
     public static void serialize(Version vrs) {
         try (FileOutputStream fos = new FileOutputStream(new File("src/ua/andrewblake/version/Version.vrs"));
              ObjectOutputStream oos = new ObjectOutputStream(fos))

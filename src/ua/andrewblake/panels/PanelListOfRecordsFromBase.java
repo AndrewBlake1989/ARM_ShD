@@ -1,6 +1,5 @@
 package ua.andrewblake.panels;
 
-import com.sun.glass.ui.View;
 import ua.andrewblake.save.Stat;
 import ua.andrewblake.settings.GlobalSettings;
 import ua.andrewblake.tablemodels.ListOfRecordsTableModel;
@@ -13,8 +12,6 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.FocusEvent;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.io.*;
 import java.sql.*;
@@ -25,14 +22,12 @@ public class PanelListOfRecordsFromBase extends JPanel {
     private JLabel labelFilter;
     private JLabel labelPeriod;
     private JLabel labelFromYear;
-//    private JTextField textFieldFromYear;
     private JComboBox<String> comboBoxFromYear;
     private JLabel labelFromMonth;
     private JComboBox<String> comboBoxFromMonth;
     private JLabel labelHyphen;
     private JLabel labelToYear;
     private JComboBox<String> comboBoxToYear;
-//    private JTextField textFieldToYear;
     private JLabel labelToMonth;
     private JComboBox<String> comboBoxToMonth;
     private JLabel labelDistance;
@@ -201,10 +196,9 @@ public class PanelListOfRecordsFromBase extends JPanel {
         textAreaShowSimple.setEditable(false);
         scrollPaneForAreaShowSimple.setViewportView(textAreaShowSimple);
 
-        buttonBack = new JButton("Назад");
+        buttonBack = new JButton("Назад", new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         this.add(buttonBack);
         buttonBack.setBounds(10, 530, 120, 30);
-        buttonBack.setIcon(new ImageIcon("src/ua/andrewblake/resources/Back.png"));
         buttonBack.addActionListener(this::buttonBackActionPerformed);
 
         buttonShowOrEdit = new JButton();
@@ -212,16 +206,14 @@ public class PanelListOfRecordsFromBase extends JPanel {
         buttonShowOrEdit.setBounds(150, 530, 120, 30);
         buttonShowOrEdit.addActionListener(this::buttonShowOrEditActionPerformed);
 
-        buttonDeleteRecord = new JButton("Видалити");
+        buttonDeleteRecord = new JButton("Видалити", new ImageIcon("src/ua/andrewblake/resources/Delete.png"));
         this.add(buttonDeleteRecord);
         buttonDeleteRecord.setBounds(290, 530, 120, 30);
-        buttonDeleteRecord.setIcon(new ImageIcon("src/ua/andrewblake/resources/Delete.png"));
         buttonDeleteRecord.addActionListener(this::buttonDeleteRecordActionPerformed);
 
-        buttonRepair = new JButton("Відновити");
+        buttonRepair = new JButton("Відновити", new ImageIcon("src/ua/andrewblake/resources/Repair.png"));
         this.add(buttonRepair);
         buttonRepair.setBounds(150, 530, 120, 30);
-        buttonRepair.setIcon(new ImageIcon("src/ua/andrewblake/resources/Repair.png"));
         buttonRepair.addActionListener(this::buttonRepairActionPerformed);
         buttonRepair.setVisible(false);
 
@@ -231,7 +223,7 @@ public class PanelListOfRecordsFromBase extends JPanel {
         GlobalSettings.setPanelListOfRecordsFromBase(this);
     }
 
-    public void fillCurrentDate() {
+    void fillCurrentDate() {
         comboBoxFromYear.setSelectedIndex(DateTime.getYearInt() - 2010);
         comboBoxToYear.setSelectedIndex(DateTime.getYearInt() - 2010);
         comboBoxFromMonth.setSelectedIndex(DateTime.getMonthInt() - 1);
@@ -281,11 +273,13 @@ public class PanelListOfRecordsFromBase extends JPanel {
                     targetFile.write(b);
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                } else {
+                    JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                }
             } catch (IOException e) {
-                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
             }
             currentStat = SerializeToBlob.deserialize();
             textAreaShowSimple.setText("");
@@ -301,7 +295,6 @@ public class PanelListOfRecordsFromBase extends JPanel {
             buttonRepair.setVisible(tableModelListOfRecords.getValueAt(tableRecords.getSelectedRow(), 4).equals("1"));
             buttonShowOrEdit.setVisible(!(tableModelListOfRecords.getValueAt(tableRecords.getSelectedRow(), 4).equals("1")));
         }
-
     }
 
     private void tableRecordsKeyPressed(java.awt.event.KeyEvent evt) {
@@ -324,11 +317,13 @@ public class PanelListOfRecordsFromBase extends JPanel {
                         targetFile.write(b);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+                    if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                        JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                    }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
                 }
                 currentStat = SerializeToBlob.deserialize();
                 textAreaShowSimple.setText("");
@@ -357,11 +352,13 @@ public class PanelListOfRecordsFromBase extends JPanel {
                         targetFile.write(b);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+                    if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                        JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+                    }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Збій зв'язку з файловою системою");
                 }
                 currentStat = SerializeToBlob.deserialize();
                 textAreaShowSimple.setText("");
@@ -378,7 +375,7 @@ public class PanelListOfRecordsFromBase extends JPanel {
         }
     }
 
-    public void refresh() {
+    void refresh() {
         if (Integer.valueOf((String) comboBoxFromYear.getSelectedItem()) - Integer.valueOf((String) comboBoxToYear.getSelectedItem()) > 0) {
             tableModelListOfRecords.refresh(null);
         }
@@ -461,7 +458,11 @@ public class PanelListOfRecordsFromBase extends JPanel {
             this.updateUI();
             statement.executeQuery("UNLOCK TABLES;");
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         tableRecords.getSelectionModel().clearSelection();
         textAreaShowSimple.setText("");
@@ -470,7 +471,7 @@ public class PanelListOfRecordsFromBase extends JPanel {
         buttonRepair.setVisible(false);
     }
 
-    public void reset(boolean edit) {
+    void reset(boolean edit) {
         comboBoxDistance.setEnabled(true);
         comboBoxDistance.setSelectedIndex(0);
         comboBoxDepartment.setSelectedIndex(0);
@@ -544,7 +545,11 @@ public class PanelListOfRecordsFromBase extends JPanel {
             query = "UNLOCK TABLES;";
             statement.executeQuery(query);
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         refresh();
     }
@@ -569,7 +574,11 @@ public class PanelListOfRecordsFromBase extends JPanel {
             query = "UNLOCK TABLES;";
             statement.executeQuery(query);
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e instanceof com.mysql.jdbc.exceptions.jdbc4.CommunicationsException) {
+                JOptionPane.showMessageDialog(null, "Збій зв'язку з Базою Даних. Перевірте мережеве з'єднання або зверніться до вашого Адміністратора");
+            } else {
+                JOptionPane.showMessageDialog(null, "При роботі з Базою Даних MySQL виникла помилка. Перевірте з'єднання та повідомте про це Вашого адміністратора.");
+            }
         }
         refresh();
     }
